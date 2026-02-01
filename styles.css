@@ -1872,4 +1872,72 @@ body {
     .score-number {
         font-size: 2.5rem;
     }
+    
+    /* Terminal Block Responsiveness */
+    .terminal {
+        margin: var(--spacing-sm) 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .terminal pre {
+        padding: var(--spacing-md);
+        min-width: 100%;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .terminal code {
+        font-size: 0.75rem;
+        word-break: break-word;
+        white-space: pre-wrap;
+    }
+    
+    /* Command Tags Responsiveness */
+    .command-tags {
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+    }
+    
+    .command-tag {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        word-break: break-word;
+    }
+    
+    /* Steps Container Responsiveness */
+    .step {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .step-number {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+    
+    .step-content h5 {
+        font-size: 0.95rem;
+    }
+    
+    .step-content p {
+        font-size: 0.9rem;
+    }
+    
+    /* Terminal Header Responsiveness */
+    .terminal-header {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+    
+    .terminal-title {
+        font-size: 0.65rem;
+    }
+    
+    .copy-btn {
+        font-size: 0.6rem;
+        padding: 3px 6px;
+    }
 }
