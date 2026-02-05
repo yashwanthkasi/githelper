@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git for Beginners - Interactive Learning</title>
+    <title>Git Fundamentals - Infosys Training</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -13,16 +13,13 @@
         <div class="header-content">
             <div class="logo">
                 <span class="logo-icon">⎇</span>
-                <h1>Git for Beginners</h1>
+                <h1>Git Fundamentals</h1>
             </div>
-            <nav class="header-nav">
-                <a href="#getting-started" class="nav-link">Getting Started</a>
-                <a href="#daily-workflow" class="nav-link">Daily Workflow</a>
-                <a href="#branching" class="nav-link">Branching</a>
-                <a href="#collaboration" class="nav-link">Collaboration</a>
-                <a href="#troubleshooting" class="nav-link">Troubleshooting</a>
-                <a href="#commands" class="nav-link">Commands</a>
-            </nav>
+            <div class="header-meta">
+                <span class="presenter-names">Kasi Yaswanth & Sonali Babanagar</span>
+                <span class="header-divider">|</span>
+                <span class="company-badge">Infosys Training</span>
+            </div>
         </div>
     </header>
 
@@ -33,9 +30,7 @@
                 <h3 id="modalTitle">git clone</h3>
                 <button class="modal-close" id="modalClose">&times;</button>
             </div>
-            <div class="modal-body" id="modalBody">
-                <!-- Command details will be injected here -->
-            </div>
+            <div class="modal-body" id="modalBody"></div>
         </div>
     </div>
 
@@ -54,9 +49,7 @@
                     </div>
                     <p class="score-message" id="scoreMessage">Great job!</p>
                 </div>
-                <div class="quiz-review" id="quizReview">
-                    <!-- Review items will be injected -->
-                </div>
+                <div class="quiz-review" id="quizReview"></div>
                 <button class="btn-primary" id="retryQuizBtn">Try Again</button>
             </div>
         </div>
@@ -67,7 +60,7 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="progress-section">
-                <h3>Your Progress</h3>
+                <h3>Course Progress</h3>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
                 </div>
@@ -75,36 +68,61 @@
             </div>
             
             <nav class="sidebar-nav">
-                <a href="#getting-started" class="sidebar-link active" data-section="getting-started">
-                    <span class="sidebar-icon">🚀</span>
-                    <span>Getting Started</span>
-                    <span class="quiz-badge" data-quiz="getting-started"></span>
-                </a>
-                <a href="#daily-workflow" class="sidebar-link" data-section="daily-workflow">
-                    <span class="sidebar-icon">📅</span>
-                    <span>Daily Workflow</span>
-                    <span class="quiz-badge" data-quiz="daily-workflow"></span>
-                </a>
-                <a href="#branching" class="sidebar-link" data-section="branching">
-                    <span class="sidebar-icon">🌿</span>
-                    <span>Branching</span>
-                    <span class="quiz-badge" data-quiz="branching"></span>
-                </a>
-                <a href="#collaboration" class="sidebar-link" data-section="collaboration">
-                    <span class="sidebar-icon">👥</span>
-                    <span>Collaboration</span>
-                    <span class="quiz-badge" data-quiz="collaboration"></span>
-                </a>
-                <a href="#troubleshooting" class="sidebar-link" data-section="troubleshooting">
-                    <span class="sidebar-icon">🔧</span>
-                    <span>Troubleshooting</span>
-                    <span class="quiz-badge" data-quiz="troubleshooting"></span>
-                </a>
-                <a href="#commands" class="sidebar-link" data-section="commands">
-                    <span class="sidebar-icon">📋</span>
-                    <span>Command Reference</span>
-                    <span class="quiz-badge" data-quiz="commands"></span>
-                </a>
+                <div class="nav-group">
+                    <span class="nav-group-label">🟢 Beginner</span>
+                    <a href="#module-1" class="sidebar-link active" data-section="module-1">
+                        <span class="module-number">1</span>
+                        <span>Git Foundations</span>
+                        <span class="quiz-badge" data-quiz="module-1"></span>
+                    </a>
+                    <a href="#module-2" class="sidebar-link" data-section="module-2">
+                        <span class="module-number">2</span>
+                        <span>First Repository</span>
+                        <span class="quiz-badge" data-quiz="module-2"></span>
+                    </a>
+                    <a href="#module-3" class="sidebar-link" data-section="module-3">
+                        <span class="module-number">3</span>
+                        <span>Daily Workflow</span>
+                        <span class="quiz-badge" data-quiz="module-3"></span>
+                    </a>
+                </div>
+                <div class="nav-group">
+                    <span class="nav-group-label">🟡 Intermediate</span>
+                    <a href="#module-4" class="sidebar-link" data-section="module-4">
+                        <span class="module-number">4</span>
+                        <span>Understanding History</span>
+                        <span class="quiz-badge" data-quiz="module-4"></span>
+                    </a>
+                    <a href="#module-5" class="sidebar-link" data-section="module-5">
+                        <span class="module-number">5</span>
+                        <span>Branching Strategies</span>
+                        <span class="quiz-badge" data-quiz="module-5"></span>
+                    </a>
+                    <a href="#module-6" class="sidebar-link" data-section="module-6">
+                        <span class="module-number">6</span>
+                        <span>Team Collaboration</span>
+                        <span class="quiz-badge" data-quiz="module-6"></span>
+                    </a>
+                </div>
+                <div class="nav-group">
+                    <span class="nav-group-label">🔴 Advanced</span>
+                    <a href="#module-7" class="sidebar-link" data-section="module-7">
+                        <span class="module-number">7</span>
+                        <span>Undoing Mistakes</span>
+                        <span class="quiz-badge" data-quiz="module-7"></span>
+                    </a>
+                    <a href="#module-8" class="sidebar-link" data-section="module-8">
+                        <span class="module-number">8</span>
+                        <span>Pro Techniques</span>
+                        <span class="quiz-badge" data-quiz="module-8"></span>
+                    </a>
+                </div>
+                <div class="nav-group">
+                    <a href="#command-reference" class="sidebar-link" data-section="command-reference">
+                        <span class="module-number">📋</span>
+                        <span>Command Reference</span>
+                    </a>
+                </div>
             </nav>
 
             <div class="sidebar-footer">
@@ -116,65 +134,289 @@
         <main class="content">
             <!-- Hero Section -->
             <section class="hero">
-                <h2>Welcome to Your Git Journey! 🎉</h2>
-                <p>Learn version control through real-world scenarios you'll face in your corporate career. No boring theory - just practical, hands-on learning!</p>
+                <div class="hero-badge">Version Control Made Easy</div>
+                <h2>Git Fundamentals</h2>
+                <p>A hands-on guide for beginners. Learn Git through real-world scenarios you'll encounter at Infosys.</p>
                 <div class="hero-stats">
                     <div class="stat-card">
-                        <span class="stat-number">7</span>
-                        <span class="stat-label">Scenarios</span>
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Modules</span>
                     </div>
                     <div class="stat-card">
                         <span class="stat-number">20+</span>
-                        <span class="stat-label">Commands</span>
+                        <span class="stat-label">Scenarios</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">6</span>
-                        <span class="stat-label">Quizzes</span>
+                        <span class="stat-number">80</span>
+                        <span class="stat-label">Quiz Questions</span>
                     </div>
                 </div>
             </section>
 
-            <!-- ==================== GETTING STARTED SECTION ==================== -->
-            <section id="getting-started" class="section">
+            <!-- ==================== MODULE 1: GIT FOUNDATIONS ==================== -->
+            <section id="module-1" class="section module">
                 <div class="section-header">
-                    <h2>🚀 Getting Started</h2>
-                    <p>Your first day in the team - let's get you set up!</p>
+                    <div class="module-badge beginner">Module 1 • Beginner</div>
+                    <h2>Git Foundations</h2>
+                    <p>Understanding what Git is, why it matters, and setting up your environment</p>
                 </div>
 
-                <!-- Scenario Card 1: First Day Clone -->
-                <div class="scenario-card" data-scenario="1">
+                <!-- Scenario 1.1: What is Git -->
+                <div class="scenario-card" data-scenario="1.1">
                     <div class="card-header">
-                        <div class="card-icon">📦</div>
+                        <div class="card-icon">💡</div>
                         <div class="card-title-section">
-                            <h3>Scenario 1: Your First Day - The Clone Wars</h3>
-                            <span class="difficulty easy">Beginner</span>
+                            <h3>1.1 What is Git & Why You Need It</h3>
+                            <span class="difficulty beginner">Beginner</span>
                         </div>
                         <button class="expand-btn" aria-label="Expand">
                             <span class="expand-icon">▼</span>
                         </button>
                     </div>
                     <div class="card-preview">
-                        <p>"Welcome to the team! Here's the repo URL. Get the code running locally."</p>
+                        <p>Understanding version control and why Git is essential for every developer</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="concept-section">
+                            <h4>🎯 What is Git?</h4>
+                            <p>Git is a <strong>distributed version control system</strong> that tracks changes in your code over time. Think of it like a <strong>time machine for your projects</strong>—you can see what changed, when it changed, who changed it, and why.</p>
+                            
+                            <div class="comparison-box">
+                                <div class="comparison-bad">
+                                    <h5>❌ Without Git</h5>
+                                    <div class="file-list">
+                                        <span>project_final.zip</span>
+                                        <span>project_final_v2.zip</span>
+                                        <span>project_REAL_final.zip</span>
+                                        <span>project_USE_THIS_ONE.zip</span>
+                                        <span>project_FINAL_FINAL.zip</span>
+                                    </div>
+                                </div>
+                                <div class="comparison-good">
+                                    <h5>✅ With Git</h5>
+                                    <div class="file-list">
+                                        <span>📁 infy-employee-portal/</span>
+                                        <span class="indent">└── Complete history tracked</span>
+                                        <span class="indent">└── Every change recorded</span>
+                                        <span class="indent">└── Easy collaboration</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="concept-section">
+                            <h4>🚀 Why Git Matters</h4>
+                            <ul class="benefit-list">
+                                <li><strong>Seamless collaboration</strong> - Multiple developers work on the same codebase without conflicts</li>
+                                <li><strong>Complete history</strong> - Every change is tracked with who, what, when, and why</li>
+                                <li><strong>Safe experimentation</strong> - Try new features without breaking working code</li>
+                                <li><strong>Easy recovery</strong> - Revert mistakes or recover deleted work in seconds</li>
+                                <li><strong>Industry standard</strong> - Used by millions of developers and every tech company including Infosys</li>
+                            </ul>
+                        </div>
+
+                        <div class="concept-section">
+                            <h4>🔄 Git vs GitHub - They're Not the Same!</h4>
+                            <p>A common beginner confusion: <strong>Git and GitHub are different things</strong>.</p>
+                            
+                            <div class="git-vs-github">
+                                <div class="concept-card">
+                                    <h5>Git (Local)</h5>
+                                    <p>Version control tool that runs on <strong>your computer</strong></p>
+                                    <p class="analogy">🖥️ Like Microsoft Word (the software)</p>
+                                </div>
+                                <div class="concept-arrow">→</div>
+                                <div class="concept-card highlight">
+                                    <h5>GitHub (Remote)</h5>
+                                    <p>Cloud platform that <strong>hosts your Git repositories</strong> online</p>
+                                    <p class="analogy">☁️ Like Google Docs (the online platform)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="tip-box">
+                                <span class="tip-icon">💡</span>
+                                <div class="tip-content">
+                                    <strong>Alternatives to GitHub:</strong> GitLab, Bitbucket, Azure DevOps - Infosys uses different platforms for different clients.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scenario 1.2: Installing & Configuring Git -->
+                <div class="scenario-card" data-scenario="1.2">
+                    <div class="card-header">
+                        <div class="card-icon">⚙️</div>
+                        <div class="card-title-section">
+                            <h3>1.2 Installing & Configuring Git</h3>
+                            <span class="difficulty beginner">Beginner</span>
+                        </div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="card-preview">
+                        <p>Set up Git on your machine and configure your identity</p>
                     </div>
                     <div class="card-content">
                         <div class="scenario-context">
                             <h4>🎬 The Situation</h4>
-                            <p>It's your first day at Infosys. Your team lead sends you a message: "Hey! Here's our project repository. Clone it and set up your local environment. Let me know if you need help!"</p>
+                            <p>Your first day at Infosys. Before you can work with any codebase, you need to install Git and configure it with your identity.</p>
                         </div>
 
                         <div class="steps-container">
-                            <h4>📝 Step-by-Step Solution</h4>
+                            <h4>📥 Step 1: Install Git</h4>
+                            
+                            <div class="os-tabs">
+                                <button class="os-tab active" data-os="windows">Windows</button>
+                                <button class="os-tab" data-os="mac">Mac</button>
+                                <button class="os-tab" data-os="linux">Linux</button>
+                            </div>
+                            
+                            <div class="os-content active" data-os="windows">
+                                <ol>
+                                    <li>Download Git from <a href="https://git-scm.com" target="_blank">git-scm.com</a></li>
+                                    <li>Run the installer and accept default settings</li>
+                                    <li>Open <strong>Git Bash</strong> or Command Prompt</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="os-content" data-os="mac">
+                                <p>Use Homebrew or download from git-scm.com:</p>
+                                <div class="terminal">
+                                    <div class="terminal-header">
+                                        <span class="terminal-title">Terminal</span>
+                                        <button class="copy-btn" data-copy="brew install git">Copy</button>
+                                    </div>
+                                    <pre><code>brew install git</code></pre>
+                                </div>
+                            </div>
+                            
+                            <div class="os-content" data-os="linux">
+                                <div class="terminal">
+                                    <div class="terminal-header">
+                                        <span class="terminal-title">Terminal (Ubuntu/Debian)</span>
+                                        <button class="copy-btn" data-copy="sudo apt-get install git">Copy</button>
+                                    </div>
+                                    <pre><code>sudo apt-get install git</code></pre>
+                                </div>
+                            </div>
+
+                            <h4>✅ Step 2: Verify Installation</h4>
+                            <div class="terminal">
+                                <div class="terminal-header">
+                                    <span class="terminal-title">Terminal</span>
+                                    <button class="copy-btn" data-copy="git --version">Copy</button>
+                                </div>
+                                <pre><code>git --version</code></pre>
+                            </div>
+                            <div class="output-block">
+                                <span class="output-label">Expected Output:</span>
+                                <pre>git version 2.43.0</pre>
+                            </div>
+
+                            <h4>👤 Step 3: Configure Your Identity</h4>
+                            <p>This information gets attached to every commit you make—like signing your name.</p>
+                            
+                            <div class="terminal">
+                                <div class="terminal-header">
+                                    <span class="terminal-title">Set Your Name</span>
+                                    <button class="copy-btn" data-copy='git config --global user.name "Your Name"'>Copy</button>
+                                </div>
+                                <pre><code>git config --global user.name "Kasi Yaswanth"</code></pre>
+                            </div>
+
+                            <div class="terminal">
+                                <div class="terminal-header">
+                                    <span class="terminal-title">Set Your Email (Use Infosys Email)</span>
+                                    <button class="copy-btn" data-copy='git config --global user.email "yourname@infosys.com"'>Copy</button>
+                                </div>
+                                <pre><code>git config --global user.email "kasi.yaswanth@infosys.com"</code></pre>
+                            </div>
+
+                            <h4>🔍 Step 4: Verify Configuration</h4>
+                            <div class="terminal">
+                                <div class="terminal-header">
+                                    <span class="terminal-title">Check Settings</span>
+                                    <button class="copy-btn" data-copy="git config --list">Copy</button>
+                                </div>
+                                <pre><code>git config --list</code></pre>
+                            </div>
+                            
+                            <div class="tip-box">
+                                <span class="tip-icon">💡</span>
+                                <div class="tip-content">
+                                    The <code>--global</code> flag applies settings to ALL repositories on your machine. Use <code>--local</code> for project-specific settings.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 1 Quiz -->
+                <div class="quiz-section" data-quiz="module-1">
+                    <div class="quiz-header">
+                        <h4>📝 Module 1 Quiz: Git Foundations</h4>
+                        <p>Test your understanding of Git basics</p>
+                    </div>
+                    <div class="quiz-container" id="quiz-module-1">
+                        <div class="quiz-progress">
+                            <div class="quiz-progress-bar"><div class="quiz-progress-fill"></div></div>
+                            <span class="quiz-progress-text">Question 1 of 10</span>
+                        </div>
+                        <div class="quiz-question-container"></div>
+                        <div class="quiz-navigation">
+                            <button class="quiz-btn quiz-prev" disabled>Previous</button>
+                            <button class="quiz-btn quiz-next">Next</button>
+                            <button class="quiz-btn quiz-submit" style="display:none;">Submit Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== MODULE 2: FIRST REPOSITORY ==================== -->
+            <section id="module-2" class="section module">
+                <div class="section-header">
+                    <div class="module-badge beginner">Module 2 • Beginner</div>
+                    <h2>Your First Repository</h2>
+                    <p>Create repositories from scratch, initialize existing projects, and clone team repos</p>
+                </div>
+
+                <!-- Scenario 2.1: Create from Scratch -->
+                <div class="scenario-card" data-scenario="2.1">
+                    <div class="card-header">
+                        <div class="card-icon">🆕</div>
+                        <div class="card-title-section">
+                            <h3>2.1 Create a Project from Scratch</h3>
+                            <span class="difficulty beginner">Beginner</span>
+                        </div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="card-preview">
+                        <p>Start a new project with Git and push it to GitHub - the complete flow</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="scenario-context">
+                            <h4>🎬 The Situation</h4>
+                            <p>You've been assigned to create a new microservice for the employee portal. You need to set up a fresh Git repository and push it to your team's GitHub.</p>
+                        </div>
+
+                        <div class="steps-container">
+                            <h4>📝 Complete Flow: Local → GitHub</h4>
                             
                             <div class="step">
                                 <div class="step-number">1</div>
                                 <div class="step-content">
-                                    <h5>Get the Repository URL</h5>
-                                    <p>Your team lead will share a URL that looks like:</p>
+                                    <h5>Create Project Folder</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
-                                            <span class="terminal-title">Repository URL</span>
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
                                         </div>
-                                        <pre><code>https://github.com/infosys-team/project-name.git</code></pre>
+                                        <pre><code>mkdir infy-employee-portal
+cd infy-employee-portal</code></pre>
                                     </div>
                                 </div>
                             </div>
@@ -182,12 +424,271 @@
                             <div class="step">
                                 <div class="step-number">2</div>
                                 <div class="step-content">
-                                    <h5>Open Terminal & Navigate to Your Workspace</h5>
-                                    <p>Open Git Bash or Command Prompt and go to where you want the project:</p>
+                                    <h5>Initialize Git Repository</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="copy-btn" data-copy="cd C:\Users\YourName\Projects">Copy</button>
+                                            <button class="copy-btn" data-copy="git init">Copy</button>
+                                        </div>
+                                        <pre><code>git init</code></pre>
+                                    </div>
+                                    <div class="output-block">
+                                        <span class="output-label">Output:</span>
+                                        <pre>Initialized empty Git repository in .../infy-employee-portal/.git/</pre>
+                                    </div>
+                                    <div class="info-note">
+                                        This creates a hidden <code>.git</code> folder - Git's brain that stores all tracking data.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Create .gitignore (Important!)</h5>
+                                    <p>Before adding files, set up <code>.gitignore</code> to exclude files that shouldn't be tracked:</p>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">.gitignore</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code># Dependencies
+node_modules/
+vendor/
+
+# Environment files (NEVER commit these!)
+.env
+.env.local
+*.pem
+
+# Build outputs
+dist/
+build/
+*.class
+
+# IDE settings
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db</code></pre>
+                                    </div>
+                                    <div class="warning-box">
+                                        <span class="warning-icon">⚠️</span>
+                                        <div class="warning-content">
+                                            <strong>Never commit</strong> API keys, passwords, or .env files! This is a security violation.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h5>Create Initial Files</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>echo "# Infy Employee Portal" > README.md
+echo "console.log('Hello Infosys!');" > index.js</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <h5>Stage and Commit</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git add .
+git commit -m "INF-1001: Initial project setup"</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">6</div>
+                                <div class="step-content">
+                                    <h5>Create GitHub Repository</h5>
+                                    <ol>
+                                        <li>Go to <a href="https://github.com/new" target="_blank">github.com/new</a></li>
+                                        <li>Name it: <code>infy-employee-portal</code></li>
+                                        <li><strong>Don't</strong> initialize with README (we already have one)</li>
+                                        <li>Click "Create repository"</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">7</div>
+                                <div class="step-content">
+                                    <h5>Connect Local to Remote & Push</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git remote add origin https://github.com/your-username/infy-employee-portal.git
+git branch -M main
+git push -u origin main</code></pre>
+                                    </div>
+                                    <div class="info-note">
+                                        <code>-u</code> sets upstream so future <code>git push</code> works without specifying remote/branch.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-box success">
+                            <span class="tip-icon">✅</span>
+                            <div class="tip-content">
+                                <strong>Done!</strong> Your code is now on GitHub. Refresh the page to see your files.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scenario 2.2: Initialize Existing Project -->
+                <div class="scenario-card" data-scenario="2.2">
+                    <div class="card-header">
+                        <div class="card-icon">📂</div>
+                        <div class="card-title-section">
+                            <h3>2.2 Initialize an Existing Project</h3>
+                            <span class="difficulty beginner">Beginner</span>
+                        </div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="card-preview">
+                        <p>You already have code but no Git tracking - here's how to add it</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="scenario-context">
+                            <h4>🎬 The Situation</h4>
+                            <p>You've been working on a project locally (maybe copied from somewhere) and now need to put it under version control. The folder has code but no <code>.git</code> folder.</p>
+                        </div>
+
+                        <div class="steps-container">
+                            <h4>📝 Adding Git to Existing Code</h4>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Navigate to Project</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>cd C:\Projects\infy-billing-service</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Create .gitignore FIRST</h5>
+                                    <p>Before initializing, create <code>.gitignore</code> to avoid tracking unwanted files:</p>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">.gitignore for Java/Spring</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code># Build outputs
+target/
+build/
+*.jar
+*.war
+
+# IDE
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# Environment
+.env
+application-local.properties
+
+# Logs
+*.log</code></pre>
+                                    </div>
+                                    <div class="tip-box">
+                                        <span class="tip-icon">💡</span>
+                                        <div class="tip-content">
+                                            Use <a href="https://gitignore.io" target="_blank">gitignore.io</a> to generate .gitignore for any tech stack!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Initialize & Commit</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git init
+git add .
+git status  # Review what's being added!
+git commit -m "INF-2001: Initial commit - existing codebase"</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scenario 2.3: Clone Team Repository -->
+                <div class="scenario-card" data-scenario="2.3">
+                    <div class="card-header">
+                        <div class="card-icon">📦</div>
+                        <div class="card-title-section">
+                            <h3>2.3 Clone a Team Repository</h3>
+                            <span class="difficulty beginner">Beginner</span>
+                        </div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="card-preview">
+                        <p>Download an existing team project to start contributing</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="scenario-context">
+                            <h4>🎬 The Situation</h4>
+                            <p>It's your first day on a new project. Your team lead sends you a repository URL and says: "Clone this and get familiar with the codebase."</p>
+                        </div>
+
+                        <div class="steps-container">
+                            <h4>📝 Cloning Steps</h4>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Navigate to Workspace</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
                                         </div>
                                         <pre><code>cd C:\Users\YourName\Projects</code></pre>
                                     </div>
@@ -195,58 +696,159 @@
                             </div>
 
                             <div class="step">
-                                <div class="step-number">3</div>
+                                <div class="step-number">2</div>
                                 <div class="step-content">
                                     <h5>Clone the Repository</h5>
-                                    <p>This downloads the entire project to your computer:</p>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git clone" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy="git clone https://github.com/infosys-team/project-name.git">Copy</button>
+                                            <button class="copy-btn">Copy</button>
                                         </div>
-                                        <pre><code>git clone https://github.com/infosys-team/project-name.git</code></pre>
+                                        <pre><code>git clone https://github.com/infosys-ltd/infy-onboarding-app.git</code></pre>
                                     </div>
                                     <div class="output-block">
                                         <span class="output-label">Output:</span>
-                                        <pre>Cloning into 'project-name'...
-remote: Enumerating objects: 1250, done.
-remote: Counting objects: 100% (1250/1250), done.
-Receiving objects: 100% (1250/1250), 2.5 MiB | 1.2 MiB/s, done.
-Resolving deltas: 100% (820/820), done.</pre>
+                                        <pre>Cloning into 'infy-onboarding-app'...
+remote: Enumerating objects: 1247, done.
+remote: Counting objects: 100% (1247/1247), done.
+remote: Compressing objects: 100% (891/891), done.
+Receiving objects: 100% (1247/1247), 2.45 MiB | 5.21 MiB/s, done.</pre>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="step">
-                                <div class="step-number">4</div>
+                                <div class="step-number">3</div>
                                 <div class="step-content">
-                                    <h5>Enter the Project Folder</h5>
+                                    <h5>Enter & Explore</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="copy-btn" data-copy="cd project-name">Copy</button>
+                                            <button class="copy-btn">Copy</button>
                                         </div>
-                                        <pre><code>cd project-name</code></pre>
+                                        <pre><code>cd infy-onboarding-app
+git status
+git log --oneline -10  # See last 10 commits
+git branch -a          # See all branches</code></pre>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="concept-section">
+                            <h4>🔍 What Clone Gives You</h4>
+                            <ul class="benefit-list">
+                                <li>All files from the repository</li>
+                                <li>Complete commit history</li>
+                                <li>All branches (remote-tracking)</li>
+                                <li>Automatic <code>origin</code> remote configured</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 2 Quiz -->
+                <div class="quiz-section" data-quiz="module-2">
+                    <div class="quiz-header">
+                        <h4>📝 Module 2 Quiz: First Repository</h4>
+                        <p>Test your understanding of creating and cloning repositories</p>
+                    </div>
+                    <div class="quiz-container" id="quiz-module-2">
+                        <div class="quiz-progress">
+                            <div class="quiz-progress-bar"><div class="quiz-progress-fill"></div></div>
+                            <span class="quiz-progress-text">Question 1 of 10</span>
+                        </div>
+                        <div class="quiz-question-container"></div>
+                        <div class="quiz-navigation">
+                            <button class="quiz-btn quiz-prev" disabled>Previous</button>
+                            <button class="quiz-btn quiz-next">Next</button>
+                            <button class="quiz-btn quiz-submit" style="display:none;">Submit Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== MODULE 3: DAILY WORKFLOW ==================== -->
+            <section id="module-3" class="section module">
+                <div class="section-header">
+                    <div class="module-badge beginner">Module 3 • Beginner</div>
+                    <h2>Daily Workflow</h2>
+                    <p>The commands you'll use every single day: status, add, commit, push, pull</p>
+                </div>
+
+                <!-- Git Three States Visualization -->
+                <div class="workflow-diagram">
+                    <h4>Understanding Git's Three States</h4>
+                    <div class="three-states">
+                        <div class="state-box working">
+                            <span class="state-name">Working Directory</span>
+                            <span class="state-desc">Your files as you edit them</span>
+                        </div>
+                        <div class="state-arrow">
+                            <span class="arrow-label">git add</span>
+                            →
+                        </div>
+                        <div class="state-box staging">
+                            <span class="state-name">Staging Area</span>
+                            <span class="state-desc">Changes ready to commit</span>
+                        </div>
+                        <div class="state-arrow">
+                            <span class="arrow-label">git commit</span>
+                            →
+                        </div>
+                        <div class="state-box repository">
+                            <span class="state-name">Repository</span>
+                            <span class="state-desc">Permanent history</span>
+                        </div>
+                        <div class="state-arrow">
+                            <span class="arrow-label">git push</span>
+                            →
+                        </div>
+                        <div class="state-box remote">
+                            <span class="state-name">Remote</span>
+                            <span class="state-desc">GitHub/GitLab</span>
+                        </div>
+                    </div>
+                    <p class="diagram-note">📦 Think of it like packing a box: Working = items scattered in room, Staging = items in box, Repository = box shipped</p>
+                </div>
+
+                <!-- Scenario 3.1: Add-Commit-Push -->
+                <div class="scenario-card" data-scenario="3.1">
+                    <div class="card-header">
+                        <div class="card-icon">🔄</div>
+                        <div class="card-title-section">
+                            <h3>3.1 The Add-Commit-Push Cycle</h3>
+                            <span class="difficulty beginner">Beginner</span>
+                        </div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="card-preview">
+                        <p>The core workflow you'll repeat hundreds of times</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="scenario-context">
+                            <h4>🎬 The Situation</h4>
+                            <p>You've been assigned ticket INF-3456: "Add input validation to login form". You need to make changes and push them to the team repository.</p>
+                        </div>
+
+                        <div class="steps-container">
+                            <h4>📝 The Daily Cycle</h4>
+                            
                             <div class="step">
-                                <div class="step-number">5</div>
+                                <div class="step-number">1</div>
                                 <div class="step-content">
-                                    <h5>Verify Everything is Working</h5>
-                                    <p>Check the status to confirm Git is tracking the project:</p>
+                                    <h5>Check Current Status (Always Start Here!)</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git status" title="View all options">ⓘ</button>
                                             <button class="copy-btn" data-copy="git status">Copy</button>
                                         </div>
                                         <pre><code>git status</code></pre>
                                     </div>
                                     <div class="output-block">
-                                        <span class="output-label">Output:</span>
+                                        <span class="output-label">Output (clean slate):</span>
                                         <pre>On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -254,240 +856,28 @@ nothing to commit, working tree clean</pre>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="tip-box">
-                            <div class="tip-icon">💡</div>
-                            <div class="tip-content">
-                                <strong>Beginner Tip:</strong> Think of <code>git clone</code> like downloading a ZIP file, but smarter! It also downloads the entire history of changes, so you can see who did what and when.
-                            </div>
-                        </div>
-
-                        <div class="commands-learned">
-                            <h4>✅ Commands You Learned</h4>
-                            <div class="command-tags">
-                                <span class="command-tag" data-command="git clone">git clone <button class="info-btn-small" data-command="git clone">ⓘ</button></span>
-                                <span class="command-tag" data-command="git status">git status <button class="info-btn-small" data-command="git status">ⓘ</button></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Git Config Card -->
-                <div class="scenario-card" data-scenario="config">
-                    <div class="card-header">
-                        <div class="card-icon">⚙️</div>
-                        <div class="card-title-section">
-                            <h3>Setting Up Your Identity</h3>
-                            <span class="difficulty easy">Beginner</span>
-                        </div>
-                        <button class="expand-btn" aria-label="Expand">
-                            <span class="expand-icon">▼</span>
-                        </button>
-                    </div>
-                    <div class="card-preview">
-                        <p>Before your first commit, tell Git who you are!</p>
-                    </div>
-                    <div class="card-content">
-                        <div class="scenario-context">
-                            <h4>🎬 Why This Matters</h4>
-                            <p>Every commit in Git is tagged with a name and email. This helps your team know who made which changes. Set this up once and forget it!</p>
-                        </div>
-
-                        <div class="steps-container">
-                            <div class="step">
-                                <div class="step-number">1</div>
-                                <div class="step-content">
-                                    <h5>Set Your Name</h5>
-                                    <div class="terminal">
-                                        <div class="terminal-header">
-                                            <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git config" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy='git config --global user.name "Your Name"'>Copy</button>
-                                        </div>
-                                        <pre><code>git config --global user.name "Your Name"</code></pre>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="step">
                                 <div class="step-number">2</div>
                                 <div class="step-content">
-                                    <h5>Set Your Email</h5>
+                                    <h5>Make Your Changes</h5>
+                                    <p>Edit files: <code>src/auth/LoginValidator.java</code></p>
+                                    <p>After editing, check status again:</p>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git config" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy='git config --global user.email "your.email@infosys.com"'>Copy</button>
-                                        </div>
-                                        <pre><code>git config --global user.email "your.email@infosys.com"</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="step">
-                                <div class="step-number">3</div>
-                                <div class="step-content">
-                                    <h5>Verify Your Settings</h5>
-                                    <div class="terminal">
-                                        <div class="terminal-header">
-                                            <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git config" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy="git config --list">Copy</button>
-                                        </div>
-                                        <pre><code>git config --list</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tip-box warning">
-                            <div class="tip-icon">⚠️</div>
-                            <div class="tip-content">
-                                <strong>Important:</strong> Use your official Infosys email for work projects. This ensures proper attribution in code reviews and audits.
-                            </div>
-                        </div>
-
-                        <div class="commands-learned">
-                            <h4>✅ Commands You Learned</h4>
-                            <div class="command-tags">
-                                <span class="command-tag">git config <button class="info-btn-small" data-command="git config">ⓘ</button></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- QUIZ: Getting Started -->
-                <div class="quiz-section" data-quiz-id="getting-started">
-                    <div class="quiz-header">
-                        <h3>🧠 Test Your Knowledge: Getting Started</h3>
-                        <p>Answer all 10 questions to test what you've learned!</p>
-                    </div>
-                    <div class="quiz-container">
-                        <div class="quiz-progress">
-                            <span class="quiz-progress-text">Question <span class="current-q">1</span> of 10</span>
-                            <div class="quiz-progress-bar">
-                                <div class="quiz-progress-fill"></div>
-                            </div>
-                        </div>
-                        <div class="quiz-questions"></div>
-                        <div class="quiz-navigation">
-                            <button class="btn-secondary quiz-prev" disabled>Previous</button>
-                            <button class="btn-primary quiz-next">Next</button>
-                            <button class="btn-success quiz-submit" style="display:none;">Submit Quiz</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ==================== DAILY WORKFLOW SECTION ==================== -->
-            <section id="daily-workflow" class="section">
-                <div class="section-header">
-                    <h2>📅 Daily Workflow</h2>
-                    <p>Commands you'll use every single day</p>
-                </div>
-
-                <!-- Scenario Card 2: Making Your First Commit -->
-                <div class="scenario-card" data-scenario="2">
-                    <div class="card-header">
-                        <div class="card-icon">💾</div>
-                        <div class="card-title-section">
-                            <h3>Scenario 2: Your First Contribution</h3>
-                            <span class="difficulty easy">Beginner</span>
-                        </div>
-                        <button class="expand-btn" aria-label="Expand">
-                            <span class="expand-icon">▼</span>
-                        </button>
-                    </div>
-                    <div class="card-preview">
-                        <p>"You fixed a typo in the README. Time to save and share your work!"</p>
-                    </div>
-                    <div class="card-content">
-                        <div class="scenario-context">
-                            <h4>🎬 The Situation</h4>
-                            <p>You noticed a typo in the README file. You fixed it, and now you want to save this change and share it with your team. This is the core Git workflow you'll use hundreds of times!</p>
-                        </div>
-
-                        <div class="git-workflow-diagram">
-                            <h4>🔄 The Git Workflow</h4>
-                            <div class="workflow-visual">
-                                <div class="workflow-stage">
-                                    <div class="stage-circle working">W</div>
-                                    <span>Working Directory</span>
-                                    <small>Your files</small>
-                                </div>
-                                <div class="workflow-arrow">
-                                    <span>git add</span>
-                                    →
-                                </div>
-                                <div class="workflow-stage">
-                                    <div class="stage-circle staging">S</div>
-                                    <span>Staging Area</span>
-                                    <small>Ready to commit</small>
-                                </div>
-                                <div class="workflow-arrow">
-                                    <span>git commit</span>
-                                    →
-                                </div>
-                                <div class="workflow-stage">
-                                    <div class="stage-circle local">L</div>
-                                    <span>Local Repo</span>
-                                    <small>Saved locally</small>
-                                </div>
-                                <div class="workflow-arrow">
-                                    <span>git push</span>
-                                    →
-                                </div>
-                                <div class="workflow-stage">
-                                    <div class="stage-circle remote">R</div>
-                                    <span>Remote Repo</span>
-                                    <small>Shared with team</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="steps-container">
-                            <h4>📝 Step-by-Step Solution</h4>
-                            
-                            <div class="step">
-                                <div class="step-number">1</div>
-                                <div class="step-content">
-                                    <h5>Check What Changed</h5>
-                                    <p>Always start by seeing what files you modified:</p>
-                                    <div class="terminal">
-                                        <div class="terminal-header">
-                                            <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git status" title="View all options">ⓘ</button>
                                             <button class="copy-btn" data-copy="git status">Copy</button>
                                         </div>
                                         <pre><code>git status</code></pre>
                                     </div>
                                     <div class="output-block">
-                                        <span class="output-label">Output:</span>
+                                        <span class="output-label">Output (with changes):</span>
                                         <pre>On branch main
 Changes not staged for commit:
-  <span class="text-red">modified:   README.md</span></pre>
-                                    </div>
-                                </div>
-                            </div>
+  <span class="text-red">modified:   src/auth/LoginValidator.java</span>
 
-                            <div class="step">
-                                <div class="step-number">2</div>
-                                <div class="step-content">
-                                    <h5>See Exactly What Changed</h5>
-                                    <p>Review your changes before committing:</p>
-                                    <div class="terminal">
-                                        <div class="terminal-header">
-                                            <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git diff" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy="git diff">Copy</button>
-                                        </div>
-                                        <pre><code>git diff</code></pre>
-                                    </div>
-                                    <div class="output-block">
-                                        <span class="output-label">Output:</span>
-                                        <pre><span class="text-red">- Welcome to the Projct</span>
-<span class="text-green">+ Welcome to the Project</span></pre>
+Untracked files:
+  <span class="text-red">src/auth/ValidationUtils.java</span></pre>
                                     </div>
                                 </div>
                             </div>
@@ -495,21 +885,16 @@ Changes not staged for commit:
                             <div class="step">
                                 <div class="step-number">3</div>
                                 <div class="step-content">
-                                    <h5>Stage Your Changes</h5>
-                                    <p>Add the file to the staging area (preparing it for commit):</p>
+                                    <h5>Review Changes Before Staging</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git add" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy="git add README.md">Copy</button>
+                                            <button class="copy-btn" data-copy="git diff">Copy</button>
                                         </div>
-                                        <pre><code>git add README.md</code></pre>
+                                        <pre><code>git diff</code></pre>
                                     </div>
-                                    <div class="tip-box inline">
-                                        <div class="tip-icon">💡</div>
-                                        <div class="tip-content">
-                                            Use <code>git add .</code> to stage ALL changed files at once!
-                                        </div>
+                                    <div class="info-note">
+                                        Always review what changed before committing. This catches accidental changes.
                                     </div>
                                 </div>
                             </div>
@@ -517,20 +902,17 @@ Changes not staged for commit:
                             <div class="step">
                                 <div class="step-number">4</div>
                                 <div class="step-content">
-                                    <h5>Commit Your Changes</h5>
-                                    <p>Save your changes with a descriptive message:</p>
+                                    <h5>Stage Changes</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git commit" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy='git commit -m "Fix typo in README title"'>Copy</button>
+                                            <button class="copy-btn" data-copy="git add .">Copy</button>
                                         </div>
-                                        <pre><code>git commit -m "Fix typo in README title"</code></pre>
-                                    </div>
-                                    <div class="output-block">
-                                        <span class="output-label">Output:</span>
-                                        <pre>[main 3a2b1c4] Fix typo in README title
- 1 file changed, 1 insertion(+), 1 deletion(-)</pre>
+                                        <pre><code># Stage specific file
+git add src/auth/LoginValidator.java
+
+# Or stage everything
+git add .</code></pre>
                                     </div>
                                 </div>
                             </div>
@@ -538,12 +920,24 @@ Changes not staged for commit:
                             <div class="step">
                                 <div class="step-number">5</div>
                                 <div class="step-content">
-                                    <h5>Push to Remote</h5>
-                                    <p>Share your changes with the team:</p>
+                                    <h5>Commit with Meaningful Message</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git push" title="View all options">ⓘ</button>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git commit -m "INF-3456: Add input validation to login form"</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">6</div>
+                                <div class="step-content">
+                                    <h5>Push to Remote</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
                                             <button class="copy-btn" data-copy="git push">Copy</button>
                                         </div>
                                         <pre><code>git push</code></pre>
@@ -552,69 +946,64 @@ Changes not staged for commit:
                             </div>
                         </div>
 
-                        <div class="commit-message-guide">
-                            <h4>✍️ Writing Good Commit Messages</h4>
-                            <div class="message-examples">
-                                <div class="message-example bad">
-                                    <span class="label">❌ Bad</span>
-                                    <code>"fixed stuff"</code>
-                                    <code>"update"</code>
-                                    <code>"changes"</code>
-                                </div>
-                                <div class="message-example good">
-                                    <span class="label">✅ Good</span>
-                                    <code>"Fix login button alignment issue"</code>
-                                    <code>"Add user authentication feature"</code>
-                                    <code>"Update README with setup instructions"</code>
-                                </div>
+                        <div class="concept-section">
+                            <h4>📝 Infosys Commit Message Format</h4>
+                            <div class="commit-format">
+                                <code>INF-XXXX: Brief description of change</code>
                             </div>
-                        </div>
-
-                        <div class="commands-learned">
-                            <h4>✅ Commands You Learned</h4>
-                            <div class="command-tags">
-                                <span class="command-tag">git status <button class="info-btn-small" data-command="git status">ⓘ</button></span>
-                                <span class="command-tag">git diff <button class="info-btn-small" data-command="git diff">ⓘ</button></span>
-                                <span class="command-tag">git add <button class="info-btn-small" data-command="git add">ⓘ</button></span>
-                                <span class="command-tag">git commit <button class="info-btn-small" data-command="git commit">ⓘ</button></span>
-                                <span class="command-tag">git push <button class="info-btn-small" data-command="git push">ⓘ</button></span>
+                            <div class="commit-examples">
+                                <div class="commit good">
+                                    <span class="commit-label">✅ Good</span>
+                                    <code>INF-3456: Add input validation to login form</code>
+                                </div>
+                                <div class="commit good">
+                                    <span class="commit-label">✅ Good</span>
+                                    <code>INF-3457: Fix null pointer in UserService</code>
+                                </div>
+                                <div class="commit bad">
+                                    <span class="commit-label">❌ Bad</span>
+                                    <code>fixed stuff</code>
+                                </div>
+                                <div class="commit bad">
+                                    <span class="commit-label">❌ Bad</span>
+                                    <code>update</code>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Scenario Card 3: Pulling Updates -->
-                <div class="scenario-card" data-scenario="3">
+                <!-- Scenario 3.2: Sync with Team -->
+                <div class="scenario-card" data-scenario="3.2">
                     <div class="card-header">
                         <div class="card-icon">⬇️</div>
                         <div class="card-title-section">
-                            <h3>Scenario 3: Getting Team Updates</h3>
-                            <span class="difficulty easy">Beginner</span>
+                            <h3>3.2 Sync with Your Team</h3>
+                            <span class="difficulty beginner">Beginner</span>
                         </div>
                         <button class="expand-btn" aria-label="Expand">
                             <span class="expand-icon">▼</span>
                         </button>
                     </div>
                     <div class="card-preview">
-                        <p>"Your teammate pushed new code. Get the latest changes!"</p>
+                        <p>Get the latest changes from your teammates before starting work</p>
                     </div>
                     <div class="card-content">
                         <div class="scenario-context">
                             <h4>🎬 The Situation</h4>
-                            <p>You come in Monday morning. Over the weekend, your teammates pushed several updates. Before you start working, you need to get their changes!</p>
+                            <p>You start your day and want to get the latest code your teammates pushed yesterday before making changes.</p>
                         </div>
 
                         <div class="steps-container">
-                            <h4>📝 Step-by-Step Solution</h4>
+                            <h4>📝 Morning Sync Routine</h4>
                             
                             <div class="step">
                                 <div class="step-number">1</div>
                                 <div class="step-content">
-                                    <h5>Pull the Latest Changes</h5>
+                                    <h5>Pull Latest Changes</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git pull" title="View all options">ⓘ</button>
                                             <button class="copy-btn" data-copy="git pull">Copy</button>
                                         </div>
                                         <pre><code>git pull</code></pre>
@@ -622,11 +1011,12 @@ Changes not staged for commit:
                                     <div class="output-block">
                                         <span class="output-label">Output:</span>
                                         <pre>remote: Enumerating objects: 5, done.
-Updating 3a2b1c4..7d8e9f0
+remote: Counting objects: 100% (5/5), done.
+Updating abc1234..def5678
 Fast-forward
- src/login.js | 25 +++++++++++++++++
- src/utils.js | 10 ++++---
- 2 files changed, 31 insertions(+), 4 deletions(-)</pre>
+ src/UserService.java | 15 ++++++++++-----
+ src/Config.java      |  3 +++
+ 2 files changed, 13 insertions(+), 5 deletions(-)</pre>
                                     </div>
                                 </div>
                             </div>
@@ -634,288 +1024,103 @@ Fast-forward
                             <div class="step">
                                 <div class="step-number">2</div>
                                 <div class="step-content">
-                                    <h5>View Recent History (Optional)</h5>
-                                    <p>See what commits came in:</p>
+                                    <h5>See What Changed</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git log" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy="git log --oneline -5">Copy</button>
+                                            <button class="copy-btn">Copy</button>
                                         </div>
                                         <pre><code>git log --oneline -5</code></pre>
                                     </div>
+                                    <div class="output-block">
+                                        <span class="output-label">Output:</span>
+                                        <pre>def5678 INF-3458: Add caching to UserService
+abc1234 INF-3457: Fix config loading issue
+9876fed INF-3456: Your commit from yesterday</pre>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tip-box">
-                            <div class="tip-icon">💡</div>
-                            <div class="tip-content">
-                                <strong>Golden Rule:</strong> Always <code>git pull</code> before you start working AND before you <code>git push</code>. This prevents most conflicts!
-                            </div>
-                        </div>
-
-                        <div class="commands-learned">
-                            <h4>✅ Commands You Learned</h4>
-                            <div class="command-tags">
-                                <span class="command-tag">git pull <button class="info-btn-small" data-command="git pull">ⓘ</button></span>
-                                <span class="command-tag">git log <button class="info-btn-small" data-command="git log">ⓘ</button></span>
+                        <div class="warning-box">
+                            <span class="warning-icon">⚠️</span>
+                            <div class="warning-content">
+                                <strong>Always pull before push!</strong> This prevents conflicts and ensures you're working with the latest code.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- QUIZ: Daily Workflow -->
-                <div class="quiz-section" data-quiz-id="daily-workflow">
+                <!-- Module 3 Quiz -->
+                <div class="quiz-section" data-quiz="module-3">
                     <div class="quiz-header">
-                        <h3>🧠 Test Your Knowledge: Daily Workflow</h3>
-                        <p>Answer all 10 questions to test what you've learned!</p>
+                        <h4>📝 Module 3 Quiz: Daily Workflow</h4>
+                        <p>Test your understanding of the daily Git workflow</p>
                     </div>
-                    <div class="quiz-container">
+                    <div class="quiz-container" id="quiz-module-3">
                         <div class="quiz-progress">
-                            <span class="quiz-progress-text">Question <span class="current-q">1</span> of 10</span>
-                            <div class="quiz-progress-bar">
-                                <div class="quiz-progress-fill"></div>
-                            </div>
+                            <div class="quiz-progress-bar"><div class="quiz-progress-fill"></div></div>
+                            <span class="quiz-progress-text">Question 1 of 10</span>
                         </div>
-                        <div class="quiz-questions"></div>
+                        <div class="quiz-question-container"></div>
                         <div class="quiz-navigation">
-                            <button class="btn-secondary quiz-prev" disabled>Previous</button>
-                            <button class="btn-primary quiz-next">Next</button>
-                            <button class="btn-success quiz-submit" style="display:none;">Submit Quiz</button>
+                            <button class="quiz-btn quiz-prev" disabled>Previous</button>
+                            <button class="quiz-btn quiz-next">Next</button>
+                            <button class="quiz-btn quiz-submit" style="display:none;">Submit Quiz</button>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- ==================== BRANCHING SECTION ==================== -->
-            <section id="branching" class="section">
+            <!-- ==================== MODULE 4: UNDERSTANDING HISTORY ==================== -->
+            <section id="module-4" class="section module">
                 <div class="section-header">
-                    <h2>🌿 Branching</h2>
-                    <p>Work on features without affecting the main code</p>
+                    <div class="module-badge intermediate">Module 4 • Intermediate</div>
+                    <h2>Understanding History</h2>
+                    <p>Navigate your project's timeline: view logs, diffs, and find who changed what</p>
                 </div>
 
-                <!-- Branch Visualization -->
-                <div class="branch-visualization">
-                    <h4>Understanding Branches</h4>
-                    <div class="branch-diagram">
-                        <div class="branch-line main-branch">
-                            <span class="branch-label">main</span>
-                            <div class="commit-dots">
-                                <span class="commit-dot">●</span>
-                                <span class="commit-line"></span>
-                                <span class="commit-dot">●</span>
-                                <span class="commit-line"></span>
-                                <span class="commit-dot">●</span>
-                                <span class="commit-line"></span>
-                                <span class="commit-dot merge-dot">●</span>
-                            </div>
-                        </div>
-                        <div class="branch-line feature-branch">
-                            <span class="branch-label">feature/login</span>
-                            <div class="commit-dots">
-                                <span class="branch-start"></span>
-                                <span class="commit-dot feature">●</span>
-                                <span class="commit-line feature"></span>
-                                <span class="commit-dot feature">●</span>
-                                <span class="merge-arrow">↗</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="diagram-caption">Branches let you work in isolation, then merge back when ready!</p>
-                </div>
-
-                <!-- Scenario Card 4: Feature Branch -->
-                <div class="scenario-card" data-scenario="4">
+                <!-- Scenario 4.1: Explore Timeline -->
+                <div class="scenario-card" data-scenario="4.1">
                     <div class="card-header">
-                        <div class="card-icon">🌱</div>
+                        <div class="card-icon">📜</div>
                         <div class="card-title-section">
-                            <h3>Scenario 4: Feature Branch Friday</h3>
-                            <span class="difficulty medium">Intermediate</span>
+                            <h3>4.1 Exploring Project History</h3>
+                            <span class="difficulty intermediate">Intermediate</span>
                         </div>
                         <button class="expand-btn" aria-label="Expand">
                             <span class="expand-icon">▼</span>
                         </button>
                     </div>
                     <div class="card-preview">
-                        <p>"PM says: Build the login page. Don't touch the main branch!"</p>
+                        <p>View commit history, compare versions, and understand project evolution</p>
                     </div>
                     <div class="card-content">
                         <div class="scenario-context">
                             <h4>🎬 The Situation</h4>
-                            <p>Your PM assigns you a new feature: build a login page. The rule is simple - never work directly on the main branch. Create a feature branch, do your work there, then merge it back when done!</p>
+                            <p>You need to understand what changes were made to the project over the past week and see the details of specific commits.</p>
                         </div>
 
                         <div class="steps-container">
-                            <h4>📝 Step-by-Step Solution</h4>
+                            <h4>📝 History Commands</h4>
                             
                             <div class="step">
                                 <div class="step-number">1</div>
                                 <div class="step-content">
-                                    <h5>Make Sure You're on Main & Up to Date</h5>
+                                    <h5>View Compact History</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git checkout" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy="git checkout main
-git pull">Copy</button>
+                                            <button class="copy-btn">Copy</button>
                                         </div>
-                                        <pre><code>git checkout main
-git pull</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="step">
-                                <div class="step-number">2</div>
-                                <div class="step-content">
-                                    <h5>Create & Switch to a New Branch</h5>
-                                    <div class="terminal">
-                                        <div class="terminal-header">
-                                            <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git checkout" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy="git checkout -b feature/login-page">Copy</button>
-                                        </div>
-                                        <pre><code>git checkout -b feature/login-page</code></pre>
+                                        <pre><code>git log --oneline</code></pre>
                                     </div>
                                     <div class="output-block">
                                         <span class="output-label">Output:</span>
-                                        <pre>Switched to a new branch 'feature/login-page'</pre>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="step">
-                                <div class="step-number">3</div>
-                                <div class="step-content">
-                                    <h5>Do Your Work & Commit</h5>
-                                    <p>Write your code, then save your progress:</p>
-                                    <div class="terminal">
-                                        <div class="terminal-header">
-                                            <span class="terminal-title">Terminal</span>
-                                            <button class="copy-btn" data-copy='git add .
-git commit -m "Add login page UI"'>Copy</button>
-                                        </div>
-                                        <pre><code>git add .
-git commit -m "Add login page UI"</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="step">
-                                <div class="step-number">4</div>
-                                <div class="step-content">
-                                    <h5>Push Your Branch to Remote</h5>
-                                    <div class="terminal">
-                                        <div class="terminal-header">
-                                            <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git push" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy="git push -u origin feature/login-page">Copy</button>
-                                        </div>
-                                        <pre><code>git push -u origin feature/login-page</code></pre>
-                                    </div>
-                                    <div class="tip-box inline">
-                                        <div class="tip-icon">💡</div>
-                                        <div class="tip-content">
-                                            The <code>-u</code> flag links your local branch to the remote. After this, you can just use <code>git push</code>!
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="step">
-                                <div class="step-number">5</div>
-                                <div class="step-content">
-                                    <h5>Create a Pull Request (PR)</h5>
-                                    <p>Go to GitHub/GitLab/Bitbucket and create a Pull Request to merge your branch into main. Your team will review your code!</p>
-                                </div>
-                            </div>
-
-                            <div class="step">
-                                <div class="step-number">6</div>
-                                <div class="step-content">
-                                    <h5>After PR is Approved - Merge Locally (Alternative)</h5>
-                                    <div class="terminal">
-                                        <div class="terminal-header">
-                                            <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git merge" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy="git checkout main
-git merge feature/login-page">Copy</button>
-                                        </div>
-                                        <pre><code>git checkout main
-git merge feature/login-page</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="naming-conventions">
-                            <h4>📛 Branch Naming Conventions</h4>
-                            <div class="convention-list">
-                                <div class="convention">
-                                    <code>feature/</code>
-                                    <span>New features → <code>feature/user-login</code></span>
-                                </div>
-                                <div class="convention">
-                                    <code>bugfix/</code>
-                                    <span>Bug fixes → <code>bugfix/login-crash</code></span>
-                                </div>
-                                <div class="convention">
-                                    <code>hotfix/</code>
-                                    <span>Urgent production fixes → <code>hotfix/security-patch</code></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="commands-learned">
-                            <h4>✅ Commands You Learned</h4>
-                            <div class="command-tags">
-                                <span class="command-tag">git branch <button class="info-btn-small" data-command="git branch">ⓘ</button></span>
-                                <span class="command-tag">git checkout <button class="info-btn-small" data-command="git checkout">ⓘ</button></span>
-                                <span class="command-tag">git checkout -b <button class="info-btn-small" data-command="git checkout">ⓘ</button></span>
-                                <span class="command-tag">git merge <button class="info-btn-small" data-command="git merge">ⓘ</button></span>
-                                <span class="command-tag">git push -u <button class="info-btn-small" data-command="git push">ⓘ</button></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Scenario Card 5: Stash -->
-                <div class="scenario-card" data-scenario="5">
-                    <div class="card-header">
-                        <div class="card-icon">🔀</div>
-                        <div class="card-title-section">
-                            <h3>Scenario 5: Context Switching</h3>
-                            <span class="difficulty medium">Intermediate</span>
-                        </div>
-                        <button class="expand-btn" aria-label="Expand">
-                            <span class="expand-icon">▼</span>
-                        </button>
-                    </div>
-                    <div class="card-preview">
-                        <p>"Urgent bug! Park your current work and switch to fix it."</p>
-                    </div>
-                    <div class="card-content">
-                        <div class="scenario-context">
-                            <h4>🎬 The Situation</h4>
-                            <p>You're in the middle of building a feature when suddenly - URGENT BUG! Your manager needs you to fix it immediately. But you don't want to lose your current work...</p>
-                        </div>
-
-                        <div class="steps-container">
-                            <h4>📝 Step-by-Step Solution</h4>
-                            
-                            <div class="step">
-                                <div class="step-number">1</div>
-                                <div class="step-content">
-                                    <h5>Stash Your Current Work</h5>
-                                    <p>This saves your uncommitted changes temporarily:</p>
-                                    <div class="terminal">
-                                        <div class="terminal-header">
-                                            <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git stash" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy='git stash save "WIP: login page styling"'>Copy</button>
-                                        </div>
-                                        <pre><code>git stash save "WIP: login page styling"</code></pre>
+                                        <pre>def5678 INF-3460: Update dependencies
+abc1234 INF-3459: Add user avatar feature
+9876fed INF-3458: Fix login timeout issue
+5432cba INF-3457: Refactor UserService</pre>
                                     </div>
                                 </div>
                             </div>
@@ -923,17 +1128,23 @@ git merge feature/login-page</code></pre>
                             <div class="step">
                                 <div class="step-number">2</div>
                                 <div class="step-content">
-                                    <h5>Switch to Main & Create Bugfix Branch</h5>
+                                    <h5>Visual Branch Graph</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="copy-btn" data-copy="git checkout main
-git pull
-git checkout -b bugfix/urgent-crash">Copy</button>
+                                            <button class="copy-btn">Copy</button>
                                         </div>
-                                        <pre><code>git checkout main
-git pull
-git checkout -b bugfix/urgent-crash</code></pre>
+                                        <pre><code>git log --oneline --graph --all</code></pre>
+                                    </div>
+                                    <div class="output-block">
+                                        <span class="output-label">Output:</span>
+                                        <pre>* def5678 (HEAD -> main) INF-3460: Update dependencies
+*   abc1234 Merge feature/user-avatar
+|\  
+| * 9876fed Add avatar upload
+| * 5432cba Add avatar display
+|/  
+* 1234abc INF-3457: Refactor UserService</pre>
                                     </div>
                                 </div>
                             </div>
@@ -941,17 +1152,13 @@ git checkout -b bugfix/urgent-crash</code></pre>
                             <div class="step">
                                 <div class="step-number">3</div>
                                 <div class="step-content">
-                                    <h5>Fix the Bug, Commit & Push</h5>
+                                    <h5>View Specific Commit Details</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="copy-btn" data-copy='git add .
-git commit -m "Fix critical crash on homepage"
-git push -u origin bugfix/urgent-crash'>Copy</button>
+                                            <button class="copy-btn">Copy</button>
                                         </div>
-                                        <pre><code>git add .
-git commit -m "Fix critical crash on homepage"
-git push -u origin bugfix/urgent-crash</code></pre>
+                                        <pre><code>git show abc1234</code></pre>
                                     </div>
                                 </div>
                             </div>
@@ -959,133 +1166,539 @@ git push -u origin bugfix/urgent-crash</code></pre>
                             <div class="step">
                                 <div class="step-number">4</div>
                                 <div class="step-content">
-                                    <h5>Go Back to Your Feature & Restore Work</h5>
+                                    <h5>Filter by Author or Date</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git stash" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy="git checkout feature/login-page
-git stash pop">Copy</button>
+                                            <button class="copy-btn">Copy</button>
                                         </div>
-                                        <pre><code>git checkout feature/login-page
-git stash pop</code></pre>
+                                        <pre><code># Commits by author
+git log --author="Kasi"
+
+# Commits from last week
+git log --since="1 week ago"
+
+# Search commit messages
+git log --grep="login"</code></pre>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="tip-box">
-                            <div class="tip-icon">💡</div>
-                            <div class="tip-content">
-                                <strong>Stash Commands:</strong><br>
-                                <code>git stash list</code> - See all stashed changes<br>
-                                <code>git stash pop</code> - Restore and remove from stash<br>
-                                <code>git stash apply</code> - Restore but keep in stash
-                            </div>
-                        </div>
-
-                        <div class="commands-learned">
-                            <h4>✅ Commands You Learned</h4>
-                            <div class="command-tags">
-                                <span class="command-tag">git stash <button class="info-btn-small" data-command="git stash">ⓘ</button></span>
-                                <span class="command-tag">git stash pop <button class="info-btn-small" data-command="git stash">ⓘ</button></span>
-                                <span class="command-tag">git stash list <button class="info-btn-small" data-command="git stash">ⓘ</button></span>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
-                <!-- QUIZ: Branching -->
-                <div class="quiz-section" data-quiz-id="branching">
-                    <div class="quiz-header">
-                        <h3>🧠 Test Your Knowledge: Branching</h3>
-                        <p>Answer all 10 questions to test what you've learned!</p>
-                    </div>
-                    <div class="quiz-container">
-                        <div class="quiz-progress">
-                            <span class="quiz-progress-text">Question <span class="current-q">1</span> of 10</span>
-                            <div class="quiz-progress-bar">
-                                <div class="quiz-progress-fill"></div>
-                            </div>
-                        </div>
-                        <div class="quiz-questions"></div>
-                        <div class="quiz-navigation">
-                            <button class="btn-secondary quiz-prev" disabled>Previous</button>
-                            <button class="btn-primary quiz-next">Next</button>
-                            <button class="btn-success quiz-submit" style="display:none;">Submit Quiz</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ==================== COLLABORATION SECTION ==================== -->
-            <section id="collaboration" class="section">
-                <div class="section-header">
-                    <h2>👥 Collaboration</h2>
-                    <p>Working with your team effectively</p>
-                </div>
-
-                <!-- Scenario Card 6: Merge Conflicts -->
-                <div class="scenario-card" data-scenario="6">
+                <!-- Scenario 4.2: Git Blame -->
+                <div class="scenario-card" data-scenario="4.2">
                     <div class="card-header">
-                        <div class="card-icon">⚔️</div>
+                        <div class="card-icon">🔍</div>
                         <div class="card-title-section">
-                            <h3>Scenario 6: The Merge Conflict Monster</h3>
-                            <span class="difficulty hard">Advanced</span>
+                            <h3>4.2 Finding Who Changed What (git blame)</h3>
+                            <span class="difficulty intermediate">Intermediate</span>
                         </div>
                         <button class="expand-btn" aria-label="Expand">
                             <span class="expand-icon">▼</span>
                         </button>
                     </div>
                     <div class="card-preview">
-                        <p>"You and your colleague both edited the same file. Git is confused!"</p>
+                        <p>Investigate when a bug was introduced and by whom</p>
                     </div>
                     <div class="card-content">
                         <div class="scenario-context">
                             <h4>🎬 The Situation</h4>
-                            <p>You and your teammate both changed the same line in a file. When you try to merge or pull, Git doesn't know which version to keep. Don't panic - this is normal and easy to fix!</p>
-                        </div>
-
-                        <div class="conflict-anatomy">
-                            <h4>🔍 Anatomy of a Conflict</h4>
-                            <div class="terminal">
-                                <div class="terminal-header">
-                                    <span class="terminal-title">config.js (with conflict markers)</span>
-                                </div>
-                                <pre><code>const API_URL = 
-<span class="conflict-marker">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
-<span class="text-green">  "https://api.production.com"</span>
-<span class="conflict-marker">=======</span>
-<span class="text-blue">  "https://api.staging.com"</span>
-<span class="conflict-marker">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/update-api</span></code></pre>
-                            </div>
-                            <div class="conflict-explanation">
-                                <div class="conflict-part">
-                                    <span class="marker">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
-                                    <span>Your current changes</span>
-                                </div>
-                                <div class="conflict-part">
-                                    <span class="marker">=======</span>
-                                    <span>Divider between versions</span>
-                                </div>
-                                <div class="conflict-part">
-                                    <span class="marker">&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name</span>
-                                    <span>Incoming changes</span>
-                                </div>
-                            </div>
+                            <p>There's a bug in <code>UserService.java</code> line 42. You need to find out when this line was changed and who changed it to understand the context.</p>
                         </div>
 
                         <div class="steps-container">
-                            <h4>📝 Step-by-Step Solution</h4>
+                            <h4>📝 Investigation Steps</h4>
                             
                             <div class="step">
                                 <div class="step-number">1</div>
                                 <div class="step-content">
-                                    <h5>Don't Panic! See Which Files Have Conflicts</h5>
+                                    <h5>See Who Wrote Each Line</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git status" title="View all options">ⓘ</button>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git blame src/UserService.java</code></pre>
+                                    </div>
+                                    <div class="output-block">
+                                        <span class="output-label">Output:</span>
+                                        <pre>abc1234 (Kasi      2026-01-15 40) public User getUser(String id) {
+abc1234 (Kasi      2026-01-15 41)     if (id == null) {
+<span class="text-yellow">def5678 (Sonali    2026-01-20 42)         return null; // Bug here!</span>
+abc1234 (Kasi      2026-01-15 43)     }
+abc1234 (Kasi      2026-01-15 44)     return userRepo.findById(id);</pre>
+                                    </div>
+                                    <p>Now you know Sonali changed line 42 on Jan 20. You can ask her about it or check the commit.</p>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Blame Specific Lines</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git blame -L 40,50 src/UserService.java</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>See File's Complete History</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git log -p -- src/UserService.java</code></pre>
+                                    </div>
+                                    <div class="info-note">
+                                        <code>-p</code> shows the actual diff in each commit. <code>--</code> separates options from file path.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tip-box">
+                            <span class="tip-icon">💡</span>
+                            <div class="tip-content">
+                                <code>git blame</code> isn't about blaming people—it's about understanding code history and context!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 4 Quiz -->
+                <div class="quiz-section" data-quiz="module-4">
+                    <div class="quiz-header">
+                        <h4>📝 Module 4 Quiz: Understanding History</h4>
+                        <p>Test your knowledge of Git history commands</p>
+                    </div>
+                    <div class="quiz-container" id="quiz-module-4">
+                        <div class="quiz-progress">
+                            <div class="quiz-progress-bar"><div class="quiz-progress-fill"></div></div>
+                            <span class="quiz-progress-text">Question 1 of 10</span>
+                        </div>
+                        <div class="quiz-question-container"></div>
+                        <div class="quiz-navigation">
+                            <button class="quiz-btn quiz-prev" disabled>Previous</button>
+                            <button class="quiz-btn quiz-next">Next</button>
+                            <button class="quiz-btn quiz-submit" style="display:none;">Submit Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== MODULE 5: BRANCHING STRATEGIES ==================== -->
+            <section id="module-5" class="section module">
+                <div class="section-header">
+                    <div class="module-badge intermediate">Module 5 • Intermediate</div>
+                    <h2>Branching Strategies</h2>
+                    <p>Work on features in isolation with branches, and use stash for context switching</p>
+                </div>
+
+                <!-- Branch Visualization -->
+                <div class="branch-diagram">
+                    <h4>🌿 How Branches Work</h4>
+                    <pre class="branch-visual">
+main:     ●───●───●───●───●───●  (stable code)
+               \           /
+feature:        ●───●───●       (your work in isolation)
+                    </pre>
+                    <p class="diagram-note">Branches let you work independently without affecting the main codebase</p>
+                </div>
+
+                <!-- Scenario 5.1: Feature Branch -->
+                <div class="scenario-card" data-scenario="5.1">
+                    <div class="card-header">
+                        <div class="card-icon">🌿</div>
+                        <div class="card-title-section">
+                            <h3>5.1 Feature Branch Workflow</h3>
+                            <span class="difficulty intermediate">Intermediate</span>
+                        </div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="card-preview">
+                        <p>Create a feature branch, work on it, and prepare for merge</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="scenario-context">
+                            <h4>🎬 The Situation</h4>
+                            <p>You've been assigned INF-4567: "Add user dashboard feature". This is a multi-day task, so you need to work on a separate branch.</p>
+                        </div>
+
+                        <div class="steps-container">
+                            <h4>📝 Feature Branch Steps</h4>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Create & Switch to Feature Branch</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git checkout -b feature/INF-4567-user-dashboard</code></pre>
+                                    </div>
+                                    <div class="output-block">
+                                        <span class="output-label">Output:</span>
+                                        <pre>Switched to a new branch 'feature/INF-4567-user-dashboard'</pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Work & Commit (Multiple Times)</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code># Day 1: Add dashboard layout
+git add .
+git commit -m "INF-4567: Add dashboard layout"
+
+# Day 2: Add widgets
+git add .
+git commit -m "INF-4567: Add dashboard widgets"
+
+# Day 3: Add API integration
+git add .
+git commit -m "INF-4567: Integrate dashboard API"</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Push Branch to Remote</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git push -u origin feature/INF-4567-user-dashboard</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h5>Create Pull Request</h5>
+                                    <p>On GitHub/GitLab, create a Pull Request from your feature branch to main for code review.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="concept-section">
+                            <h4>📋 Infosys Branch Naming Conventions</h4>
+                            <table class="naming-table">
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Format</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Feature</td>
+                                        <td><code>feature/INF-XXXX-description</code></td>
+                                        <td><code>feature/INF-4567-user-dashboard</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bug Fix</td>
+                                        <td><code>bugfix/INF-XXXX-description</code></td>
+                                        <td><code>bugfix/INF-4568-login-timeout</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hotfix</td>
+                                        <td><code>hotfix/INF-XXXX-description</code></td>
+                                        <td><code>hotfix/INF-4569-security-patch</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Release</td>
+                                        <td><code>release/vX.Y.Z</code></td>
+                                        <td><code>release/v2.1.0</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scenario 5.2: Git Stash -->
+                <div class="scenario-card" data-scenario="5.2">
+                    <div class="card-header">
+                        <div class="card-icon">📦</div>
+                        <div class="card-title-section">
+                            <h3>5.2 Context Switching with Stash</h3>
+                            <span class="difficulty intermediate">Intermediate</span>
+                        </div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="card-preview">
+                        <p>Save your work temporarily to handle urgent tasks</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="scenario-context">
+                            <h4>🎬 The Situation</h4>
+                            <p>You're working on the dashboard feature when suddenly your lead says: "Drop everything! There's a critical bug in production that needs to be fixed NOW!"</p>
+                            <p>Problem: You have uncommitted changes that aren't ready to commit yet.</p>
+                        </div>
+
+                        <div class="steps-container">
+                            <h4>📝 Stash Workflow</h4>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Save Your Work to Stash</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git stash save "WIP: Dashboard widgets"</code></pre>
+                                    </div>
+                                    <div class="output-block">
+                                        <span class="output-label">Output:</span>
+                                        <pre>Saved working directory and index state On feature/INF-4567: WIP: Dashboard widgets</pre>
+                                    </div>
+                                    <p>Your changes are now safely stored and working directory is clean!</p>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Switch to Fix the Bug</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git checkout main
+git pull
+git checkout -b hotfix/INF-9999-critical-fix
+
+# Fix the bug...
+git add .
+git commit -m "INF-9999: Fix critical production bug"
+git push -u origin hotfix/INF-9999-critical-fix</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Return to Your Feature Work</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git checkout feature/INF-4567-user-dashboard
+git stash pop</code></pre>
+                                    </div>
+                                    <p>Your stashed changes are back! Continue where you left off.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="concept-section">
+                            <h4>📋 Useful Stash Commands</h4>
+                            <table class="command-table">
+                                <tr>
+                                    <td><code>git stash</code></td>
+                                    <td>Stash current changes</td>
+                                </tr>
+                                <tr>
+                                    <td><code>git stash list</code></td>
+                                    <td>See all stashes</td>
+                                </tr>
+                                <tr>
+                                    <td><code>git stash pop</code></td>
+                                    <td>Apply and remove latest stash</td>
+                                </tr>
+                                <tr>
+                                    <td><code>git stash apply</code></td>
+                                    <td>Apply but keep in list</td>
+                                </tr>
+                                <tr>
+                                    <td><code>git stash drop</code></td>
+                                    <td>Delete a stash</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 5 Quiz -->
+                <div class="quiz-section" data-quiz="module-5">
+                    <div class="quiz-header">
+                        <h4>📝 Module 5 Quiz: Branching Strategies</h4>
+                        <p>Test your knowledge of branching and stashing</p>
+                    </div>
+                    <div class="quiz-container" id="quiz-module-5">
+                        <div class="quiz-progress">
+                            <div class="quiz-progress-bar"><div class="quiz-progress-fill"></div></div>
+                            <span class="quiz-progress-text">Question 1 of 10</span>
+                        </div>
+                        <div class="quiz-question-container"></div>
+                        <div class="quiz-navigation">
+                            <button class="quiz-btn quiz-prev" disabled>Previous</button>
+                            <button class="quiz-btn quiz-next">Next</button>
+                            <button class="quiz-btn quiz-submit" style="display:none;">Submit Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== MODULE 6: TEAM COLLABORATION ==================== -->
+            <section id="module-6" class="section module">
+                <div class="section-header">
+                    <div class="module-badge intermediate">Module 6 • Intermediate</div>
+                    <h2>Team Collaboration</h2>
+                    <p>Work with remotes, handle pull requests, and resolve merge conflicts</p>
+                </div>
+
+                <!-- Scenario 6.1: Working with Remotes -->
+                <div class="scenario-card" data-scenario="6.1">
+                    <div class="card-header">
+                        <div class="card-icon">🌐</div>
+                        <div class="card-title-section">
+                            <h3>6.1 Working with Remote Repositories</h3>
+                            <span class="difficulty intermediate">Intermediate</span>
+                        </div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="card-preview">
+                        <p>Manage connections to remote repositories and understand fetch vs pull</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="steps-container">
+                            <h4>📝 Remote Commands</h4>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>View Remote Connections</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn" data-copy="git remote -v">Copy</button>
+                                        </div>
+                                        <pre><code>git remote -v</code></pre>
+                                    </div>
+                                    <div class="output-block">
+                                        <span class="output-label">Output:</span>
+                                        <pre>origin  https://github.com/infosys-ltd/infy-portal.git (fetch)
+origin  https://github.com/infosys-ltd/infy-portal.git (push)</pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Fetch vs Pull</h5>
+                                    <div class="comparison-box">
+                                        <div class="comparison-item">
+                                            <h5><code>git fetch</code></h5>
+                                            <p>Downloads changes but <strong>doesn't merge</strong></p>
+                                            <p>Safe to run anytime - lets you review first</p>
+                                        </div>
+                                        <div class="comparison-item">
+                                            <h5><code>git pull</code></h5>
+                                            <p>Downloads <strong>and merges</strong> automatically</p>
+                                            <p>Equivalent to: <code>git fetch</code> + <code>git merge</code></p>
+                                        </div>
+                                    </div>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Safe approach: Fetch first, then review</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git fetch origin
+git log HEAD..origin/main --oneline  # See what's new
+git merge origin/main                 # Merge when ready</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scenario 6.2: Merge Conflicts -->
+                <div class="scenario-card" data-scenario="6.2">
+                    <div class="card-header">
+                        <div class="card-icon">⚔️</div>
+                        <div class="card-title-section">
+                            <h3>6.2 Resolving Merge Conflicts</h3>
+                            <span class="difficulty intermediate">Intermediate</span>
+                        </div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="card-preview">
+                        <p>When two developers change the same lines - how to fix it</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="scenario-context">
+                            <h4>🎬 The Situation</h4>
+                            <p>You and a teammate both modified the same function. When you try to merge or pull, Git says there's a conflict!</p>
+                        </div>
+
+                        <div class="concept-section">
+                            <h4>🔍 Anatomy of a Conflict</h4>
+                            <p>Git marks conflicts with special markers in the file:</p>
+                            <div class="conflict-example">
+                                <pre><code>public String getUserName() {
+<<<<<<< HEAD
+    return firstName + " " + lastName;
+=======
+    return lastName + ", " + firstName;
+>>>>>>> feature/name-format
+}</code></pre>
+                            </div>
+                            <div class="conflict-legend">
+                                <p><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> = Your current changes</p>
+                                <p><code>=======</code> = Divider</p>
+                                <p><code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/name-format</code> = Incoming changes</p>
+                            </div>
+                        </div>
+
+                        <div class="steps-container">
+                            <h4>📝 Resolving Steps</h4>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>See Conflicting Files</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
                                             <button class="copy-btn" data-copy="git status">Copy</button>
                                         </div>
                                         <pre><code>git status</code></pre>
@@ -1093,7 +1706,7 @@ git stash pop</code></pre>
                                     <div class="output-block">
                                         <span class="output-label">Output:</span>
                                         <pre>Unmerged paths:
-  <span class="text-red">both modified:   config.js</span></pre>
+  <span class="text-red">both modified: src/UserService.java</span></pre>
                                     </div>
                                 </div>
                             </div>
@@ -1101,14 +1714,15 @@ git stash pop</code></pre>
                             <div class="step">
                                 <div class="step-number">2</div>
                                 <div class="step-content">
-                                    <h5>Open the File & Resolve</h5>
-                                    <p>Edit the file and keep what you want. Remove the conflict markers:</p>
-                                    <div class="terminal">
-                                        <div class="terminal-header">
-                                            <span class="terminal-title">config.js (resolved)</span>
-                                        </div>
-                                        <pre><code>const API_URL = "https://api.production.com"</code></pre>
+                                    <h5>Edit File - Choose What to Keep</h5>
+                                    <p>Open the file and decide which version (or combine both):</p>
+                                    <div class="conflict-example">
+                                        <pre><code>// After resolving - keep what makes sense:
+public String getUserName() {
+    return lastName + ", " + firstName; // Kept incoming format
+}</code></pre>
                                     </div>
+                                    <p>Remove ALL conflict markers (<code>&lt;&lt;&lt;</code>, <code>===</code>, <code>&gt;&gt;&gt;</code>)</p>
                                 </div>
                             </div>
 
@@ -1119,87 +1733,127 @@ git stash pop</code></pre>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="copy-btn" data-copy='git add config.js
-git commit -m "Resolve merge conflict in config.js"'>Copy</button>
+                                            <button class="copy-btn">Copy</button>
                                         </div>
-                                        <pre><code>git add config.js
-git commit -m "Resolve merge conflict in config.js"</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="step">
-                                <div class="step-number">4</div>
-                                <div class="step-content">
-                                    <h5>Abort Merge (If Things Go Wrong)</h5>
-                                    <p>If you want to start over:</p>
-                                    <div class="terminal">
-                                        <div class="terminal-header">
-                                            <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git merge" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy="git merge --abort">Copy</button>
-                                        </div>
-                                        <pre><code>git merge --abort</code></pre>
+                                        <pre><code>git add src/UserService.java
+git commit -m "Resolve merge conflict in UserService"</code></pre>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tip-box warning">
-                            <div class="tip-icon">⚠️</div>
+                        <div class="tip-box">
+                            <span class="tip-icon">💡</span>
                             <div class="tip-content">
-                                <strong>Pro Tip:</strong> Talk to your teammate before resolving! Make sure you don't accidentally delete their important changes. Communication prevents conflicts from becoming problems!
-                            </div>
-                        </div>
-
-                        <div class="commands-learned">
-                            <h4>✅ Commands You Learned</h4>
-                            <div class="command-tags">
-                                <span class="command-tag">Conflict resolution</span>
-                                <span class="command-tag">git merge --abort <button class="info-btn-small" data-command="git merge">ⓘ</button></span>
+                                <strong>VS Code</strong> has excellent conflict resolution UI - it shows "Accept Current", "Accept Incoming", "Accept Both" buttons!
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Remote Operations -->
-                <div class="scenario-card" data-scenario="remote">
+                <!-- Module 6 Quiz -->
+                <div class="quiz-section" data-quiz="module-6">
+                    <div class="quiz-header">
+                        <h4>📝 Module 6 Quiz: Team Collaboration</h4>
+                        <p>Test your knowledge of remotes and conflict resolution</p>
+                    </div>
+                    <div class="quiz-container" id="quiz-module-6">
+                        <div class="quiz-progress">
+                            <div class="quiz-progress-bar"><div class="quiz-progress-fill"></div></div>
+                            <span class="quiz-progress-text">Question 1 of 10</span>
+                        </div>
+                        <div class="quiz-question-container"></div>
+                        <div class="quiz-navigation">
+                            <button class="quiz-btn quiz-prev" disabled>Previous</button>
+                            <button class="quiz-btn quiz-next">Next</button>
+                            <button class="quiz-btn quiz-submit" style="display:none;">Submit Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== MODULE 7: UNDOING MISTAKES ==================== -->
+            <section id="module-7" class="section module">
+                <div class="section-header">
+                    <div class="module-badge advanced">Module 7 • Advanced</div>
+                    <h2>Undoing Mistakes</h2>
+                    <p>Reset, revert, restore - fix errors and recover lost work</p>
+                </div>
+
+                <!-- Reset Modes Visualization -->
+                <div class="reset-diagram">
+                    <h4>🔄 Understanding Reset Modes</h4>
+                    <table class="reset-table">
+                        <thead>
+                            <tr>
+                                <th>Mode</th>
+                                <th>HEAD</th>
+                                <th>Staging</th>
+                                <th>Working Dir</th>
+                                <th>Use When</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="soft">
+                                <td><code>--soft</code></td>
+                                <td>✅ Moved</td>
+                                <td>✅ Kept</td>
+                                <td>✅ Kept</td>
+                                <td>Re-commit with different message</td>
+                            </tr>
+                            <tr class="mixed">
+                                <td><code>--mixed</code></td>
+                                <td>✅ Moved</td>
+                                <td>❌ Reset</td>
+                                <td>✅ Kept</td>
+                                <td>Unstage files, re-add selectively</td>
+                            </tr>
+                            <tr class="hard">
+                                <td><code>--hard</code></td>
+                                <td>✅ Moved</td>
+                                <td>❌ Reset</td>
+                                <td>❌ Reset</td>
+                                <td>⚠️ Discard everything (DANGER!)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Scenario 7.1: Undo Commits -->
+                <div class="scenario-card" data-scenario="7.1">
                     <div class="card-header">
-                        <div class="card-icon">🌐</div>
+                        <div class="card-icon">↩️</div>
                         <div class="card-title-section">
-                            <h3>Working with Remotes</h3>
-                            <span class="difficulty medium">Intermediate</span>
+                            <h3>7.1 Undoing Commits</h3>
+                            <span class="difficulty advanced">Advanced</span>
                         </div>
                         <button class="expand-btn" aria-label="Expand">
                             <span class="expand-icon">▼</span>
                         </button>
                     </div>
                     <div class="card-preview">
-                        <p>Understand how your local repo connects to the server</p>
+                        <p>Undo local commits, amend messages, and safely undo published commits</p>
                     </div>
                     <div class="card-content">
-                        <div class="scenario-context">
-                            <h4>🎬 Understanding Remotes</h4>
-                            <p>A "remote" is a version of your repository hosted on a server (like GitHub). The default remote is usually called "origin".</p>
-                        </div>
-
                         <div class="steps-container">
+                            <h4>📝 Common Undo Scenarios</h4>
+                            
                             <div class="step">
                                 <div class="step-number">1</div>
                                 <div class="step-content">
-                                    <h5>View Your Remotes</h5>
+                                    <h5>Fix Last Commit Message</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git remote" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy="git remote -v">Copy</button>
+                                            <button class="copy-btn">Copy</button>
                                         </div>
-                                        <pre><code>git remote -v</code></pre>
+                                        <pre><code>git commit --amend -m "INF-5678: Correct commit message"</code></pre>
                                     </div>
-                                    <div class="output-block">
-                                        <span class="output-label">Output:</span>
-                                        <pre>origin  https://github.com/infosys-team/project.git (fetch)
-origin  https://github.com/infosys-team/project.git (push)</pre>
+                                    <div class="warning-box">
+                                        <span class="warning-icon">⚠️</span>
+                                        <div class="warning-content">
+                                            Only amend commits that <strong>haven't been pushed</strong>! Amending rewrites history.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1207,373 +1861,429 @@ origin  https://github.com/infosys-team/project.git (push)</pre>
                             <div class="step">
                                 <div class="step-number">2</div>
                                 <div class="step-content">
-                                    <h5>Fetch Without Merging</h5>
-                                    <p>Download changes but don't apply them:</p>
+                                    <h5>Undo Last Commit (Keep Changes)</h5>
                                     <div class="terminal">
                                         <div class="terminal-header">
                                             <span class="terminal-title">Terminal</span>
-                                            <button class="info-btn" data-command="git fetch" title="View all options">ⓘ</button>
-                                            <button class="copy-btn" data-copy="git fetch origin">Copy</button>
+                                            <button class="copy-btn">Copy</button>
                                         </div>
-                                        <pre><code>git fetch origin</code></pre>
+                                        <pre><code># Keep changes staged
+git reset --soft HEAD~1
+
+# Keep changes unstaged
+git reset HEAD~1</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Undo a Published Commit (Safe Way)</h5>
+                                    <p>Use <code>revert</code> to create a new commit that undoes the changes:</p>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git revert abc1234</code></pre>
+                                    </div>
+                                    <div class="info-note">
+                                        <code>git revert</code> is safe for shared branches because it doesn't rewrite history.
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="commands-learned">
-                            <h4>✅ Commands You Learned</h4>
-                            <div class="command-tags">
-                                <span class="command-tag">git remote <button class="info-btn-small" data-command="git remote">ⓘ</button></span>
-                                <span class="command-tag">git fetch <button class="info-btn-small" data-command="git fetch">ⓘ</button></span>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
-                <!-- QUIZ: Collaboration -->
-                <div class="quiz-section" data-quiz-id="collaboration">
-                    <div class="quiz-header">
-                        <h3>🧠 Test Your Knowledge: Collaboration</h3>
-                        <p>Answer all 10 questions to test what you've learned!</p>
-                    </div>
-                    <div class="quiz-container">
-                        <div class="quiz-progress">
-                            <span class="quiz-progress-text">Question <span class="current-q">1</span> of 10</span>
-                            <div class="quiz-progress-bar">
-                                <div class="quiz-progress-fill"></div>
-                            </div>
-                        </div>
-                        <div class="quiz-questions"></div>
-                        <div class="quiz-navigation">
-                            <button class="btn-secondary quiz-prev" disabled>Previous</button>
-                            <button class="btn-primary quiz-next">Next</button>
-                            <button class="btn-success quiz-submit" style="display:none;">Submit Quiz</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ==================== TROUBLESHOOTING SECTION ==================== -->
-            <section id="troubleshooting" class="section">
-                <div class="section-header">
-                    <h2>🔧 Troubleshooting</h2>
-                    <p>Fixing common mistakes (we all make them!)</p>
-                </div>
-
-                <!-- Scenario Card 7: Undo Mistakes -->
-                <div class="scenario-card" data-scenario="7">
+                <!-- Scenario 7.2: Recover Lost Work -->
+                <div class="scenario-card" data-scenario="7.2">
                     <div class="card-header">
-                        <div class="card-icon">⏪</div>
+                        <div class="card-icon">🔮</div>
                         <div class="card-title-section">
-                            <h3>Scenario 7: The Accidental Commit</h3>
-                            <span class="difficulty medium">Intermediate</span>
+                            <h3>7.2 Recovering Lost Work with Reflog</h3>
+                            <span class="difficulty advanced">Advanced</span>
                         </div>
                         <button class="expand-btn" aria-label="Expand">
                             <span class="expand-icon">▼</span>
                         </button>
                     </div>
                     <div class="card-preview">
-                        <p>"Oh no! I committed the wrong file / wrong message / too early!"</p>
+                        <p>The "time machine" that can recover almost anything</p>
                     </div>
                     <div class="card-content">
                         <div class="scenario-context">
                             <h4>🎬 The Situation</h4>
-                            <p>You made a commit but something's wrong - maybe you included a file by mistake, the message has a typo, or you want to add more changes. Don't worry, Git has your back!</p>
+                            <p>Panic! You ran <code>git reset --hard</code> and lost commits. Or you deleted a branch with work on it. Is it gone forever?</p>
+                            <p><strong>No!</strong> Git's reflog remembers everything for ~30 days.</p>
                         </div>
 
-                        <div class="undo-scenarios">
-                            <h4>🔄 Common Undo Scenarios</h4>
-
-                            <div class="undo-case">
-                                <h5>Case 1: Fix the Last Commit Message</h5>
-                                <div class="terminal">
-                                    <div class="terminal-header">
-                                        <span class="terminal-title">Terminal</span>
-                                        <button class="info-btn" data-command="git commit" title="View all options">ⓘ</button>
-                                        <button class="copy-btn" data-copy='git commit --amend -m "New correct message"'>Copy</button>
+                        <div class="steps-container">
+                            <h4>📝 Recovery Steps</h4>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>View Reflog (Git's Activity Log)</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn" data-copy="git reflog">Copy</button>
+                                        </div>
+                                        <pre><code>git reflog</code></pre>
                                     </div>
-                                    <pre><code>git commit --amend -m "New correct message"</code></pre>
-                                </div>
-                            </div>
-
-                            <div class="undo-case">
-                                <h5>Case 2: Add Forgotten Files to Last Commit</h5>
-                                <div class="terminal">
-                                    <div class="terminal-header">
-                                        <span class="terminal-title">Terminal</span>
-                                        <button class="copy-btn" data-copy="git add forgotten-file.js
-git commit --amend --no-edit">Copy</button>
-                                    </div>
-                                    <pre><code>git add forgotten-file.js
-git commit --amend --no-edit</code></pre>
-                                </div>
-                            </div>
-
-                            <div class="undo-case">
-                                <h5>Case 3: Undo Last Commit (Keep Changes)</h5>
-                                <div class="terminal">
-                                    <div class="terminal-header">
-                                        <span class="terminal-title">Terminal</span>
-                                        <button class="info-btn" data-command="git reset" title="View all options">ⓘ</button>
-                                        <button class="copy-btn" data-copy="git reset --soft HEAD~1">Copy</button>
-                                    </div>
-                                    <pre><code>git reset --soft HEAD~1</code></pre>
-                                </div>
-                                <p class="undo-note">Your files stay modified, commit is undone. Safe!</p>
-                            </div>
-
-                            <div class="undo-case">
-                                <h5>Case 4: Completely Discard Last Commit</h5>
-                                <div class="terminal">
-                                    <div class="terminal-header">
-                                        <span class="terminal-title">Terminal</span>
-                                        <button class="info-btn" data-command="git reset" title="View all options">ⓘ</button>
-                                        <button class="copy-btn" data-copy="git reset --hard HEAD~1">Copy</button>
-                                    </div>
-                                    <pre><code>git reset --hard HEAD~1</code></pre>
-                                </div>
-                                <div class="tip-box warning inline">
-                                    <div class="tip-icon">⚠️</div>
-                                    <div class="tip-content">
-                                        <strong>Danger!</strong> This deletes your changes permanently!
+                                    <div class="output-block">
+                                        <span class="output-label">Output:</span>
+                                        <pre>abc1234 HEAD@{0}: reset: moving to HEAD~3
+def5678 HEAD@{1}: commit: INF-5678: Important feature  ← Your lost commit!
+ghi9012 HEAD@{2}: commit: INF-5677: Another commit
+...</pre>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="undo-case">
-                                <h5>Case 5: Discard Uncommitted Changes in a File</h5>
-                                <div class="terminal">
-                                    <div class="terminal-header">
-                                        <span class="terminal-title">Terminal</span>
-                                        <button class="info-btn" data-command="git checkout" title="View all options">ⓘ</button>
-                                        <button class="copy-btn" data-copy="git checkout -- filename.js">Copy</button>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Recover to That Point</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git reset --hard def5678</code></pre>
                                     </div>
-                                    <pre><code>git checkout -- filename.js</code></pre>
-                                </div>
-                            </div>
-
-                            <div class="undo-case">
-                                <h5>Case 6: Undo a Pushed Commit (Safe Way)</h5>
-                                <div class="terminal">
-                                    <div class="terminal-header">
-                                        <span class="terminal-title">Terminal</span>
-                                        <button class="info-btn" data-command="git revert" title="View all options">ⓘ</button>
-                                        <button class="copy-btn" data-copy="git revert HEAD">Copy</button>
-                                    </div>
-                                    <pre><code>git revert HEAD</code></pre>
-                                </div>
-                                <p class="undo-note">Creates a new commit that undoes the previous one. Safe for shared branches!</p>
-                            </div>
-
-                            <div class="undo-case">
-                                <h5>Case 7: Unstage a Staged File</h5>
-                                <div class="terminal">
-                                    <div class="terminal-header">
-                                        <span class="terminal-title">Terminal</span>
-                                        <button class="info-btn" data-command="git restore" title="View all options">ⓘ</button>
-                                        <button class="copy-btn" data-copy="git restore --staged filename.js">Copy</button>
-                                    </div>
-                                    <pre><code>git restore --staged filename.js</code></pre>
+                                    <p>Your commits are back!</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tip-box">
-                            <div class="tip-icon">💡</div>
+                        <div class="tip-box success">
+                            <span class="tip-icon">✅</span>
                             <div class="tip-content">
-                                <strong>Rule of Thumb:</strong> If you haven't pushed yet, you can safely amend or reset. Once pushed, use <code>git revert</code> instead to create a new commit that undoes the change (safer for team collaboration).
-                            </div>
-                        </div>
-
-                        <div class="commands-learned">
-                            <h4>✅ Commands You Learned</h4>
-                            <div class="command-tags">
-                                <span class="command-tag">git commit --amend <button class="info-btn-small" data-command="git commit">ⓘ</button></span>
-                                <span class="command-tag">git reset <button class="info-btn-small" data-command="git reset">ⓘ</button></span>
-                                <span class="command-tag">git revert <button class="info-btn-small" data-command="git revert">ⓘ</button></span>
-                                <span class="command-tag">git restore <button class="info-btn-small" data-command="git restore">ⓘ</button></span>
+                                <strong>Reflog is your safety net.</strong> As long as you committed something, it can usually be recovered.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- QUIZ: Troubleshooting -->
-                <div class="quiz-section" data-quiz-id="troubleshooting">
+                <!-- Module 7 Quiz -->
+                <div class="quiz-section" data-quiz="module-7">
                     <div class="quiz-header">
-                        <h3>🧠 Test Your Knowledge: Troubleshooting</h3>
-                        <p>Answer all 10 questions to test what you've learned!</p>
+                        <h4>📝 Module 7 Quiz: Undoing Mistakes</h4>
+                        <p>Test your knowledge of reset, revert, and recovery</p>
                     </div>
-                    <div class="quiz-container">
+                    <div class="quiz-container" id="quiz-module-7">
                         <div class="quiz-progress">
-                            <span class="quiz-progress-text">Question <span class="current-q">1</span> of 10</span>
-                            <div class="quiz-progress-bar">
-                                <div class="quiz-progress-fill"></div>
-                            </div>
+                            <div class="quiz-progress-bar"><div class="quiz-progress-fill"></div></div>
+                            <span class="quiz-progress-text">Question 1 of 10</span>
                         </div>
-                        <div class="quiz-questions"></div>
+                        <div class="quiz-question-container"></div>
                         <div class="quiz-navigation">
-                            <button class="btn-secondary quiz-prev" disabled>Previous</button>
-                            <button class="btn-primary quiz-next">Next</button>
-                            <button class="btn-success quiz-submit" style="display:none;">Submit Quiz</button>
+                            <button class="quiz-btn quiz-prev" disabled>Previous</button>
+                            <button class="quiz-btn quiz-next">Next</button>
+                            <button class="quiz-btn quiz-submit" style="display:none;">Submit Quiz</button>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- ==================== COMMAND REFERENCE SECTION ==================== -->
-            <section id="commands" class="section">
+            <!-- ==================== MODULE 8: PRO TECHNIQUES ==================== -->
+            <section id="module-8" class="section module">
                 <div class="section-header">
-                    <h2>📋 Command Reference</h2>
-                    <p>Quick cheat sheet - click ⓘ for detailed options!</p>
+                    <div class="module-badge advanced">Module 8 • Advanced</div>
+                    <h2>Pro Techniques</h2>
+                    <p>Interactive rebase, cherry-pick, and tags for versioning</p>
                 </div>
 
-                <div class="command-categories">
-                    <div class="command-category">
-                        <h3>⚙️ Setup & Config</h3>
-                        <div class="command-list">
-                            <div class="command-item">
-                                <code>git config --global user.name "Name"</code>
-                                <span>Set your name</span>
-                                <button class="info-btn-small" data-command="git config">ⓘ</button>
+                <!-- Scenario 8.1: Interactive Rebase -->
+                <div class="scenario-card" data-scenario="8.1">
+                    <div class="card-header">
+                        <div class="card-icon">✂️</div>
+                        <div class="card-title-section">
+                            <h3>8.1 Clean History with Interactive Rebase</h3>
+                            <span class="difficulty advanced">Advanced</span>
+                        </div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="card-preview">
+                        <p>Squash messy commits into clean, meaningful ones before PR</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="scenario-context">
+                            <h4>🎬 The Situation</h4>
+                            <p>Your feature branch has commits like: "WIP", "fix typo", "oops", "actually fix it". Before creating a PR, you want to clean this up into one meaningful commit.</p>
+                        </div>
+
+                        <div class="steps-container">
+                            <h4>📝 Squash Commits</h4>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Start Interactive Rebase</h5>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">Terminal</span>
+                                            <button class="copy-btn">Copy</button>
+                                        </div>
+                                        <pre><code>git rebase -i HEAD~4  # Last 4 commits</code></pre>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="command-item">
-                                <code>git init</code>
-                                <span>Initialize new repository</span>
-                                <button class="info-btn-small" data-command="git init">ⓘ</button>
+
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Edit the Rebase Plan</h5>
+                                    <p>An editor opens showing:</p>
+                                    <div class="conflict-example">
+                                        <pre><code>pick abc1234 WIP dashboard
+pick def5678 fix typo
+pick ghi9012 oops
+pick jkl3456 actually fix it</code></pre>
+                                    </div>
+                                    <p>Change to squash all into first:</p>
+                                    <div class="conflict-example">
+                                        <pre><code>pick abc1234 WIP dashboard
+squash def5678 fix typo
+squash ghi9012 oops
+squash jkl3456 actually fix it</code></pre>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="command-item">
-                                <code>git clone &lt;url&gt;</code>
-                                <span>Clone a repository</span>
-                                <button class="info-btn-small" data-command="git clone">ⓘ</button>
+
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Write Final Commit Message</h5>
+                                    <p>After saving, write a clean message:</p>
+                                    <div class="terminal">
+                                        <div class="terminal-header">
+                                            <span class="terminal-title">New commit message</span>
+                                        </div>
+                                        <pre><code>INF-4567: Add user dashboard feature
+
+- Added dashboard layout
+- Implemented widgets
+- Connected to backend API</code></pre>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="command-category">
-                        <h3>📅 Daily Workflow</h3>
-                        <div class="command-list">
-                            <div class="command-item">
-                                <code>git status</code>
-                                <span>Check current status</span>
-                                <button class="info-btn-small" data-command="git status">ⓘ</button>
-                            </div>
-                            <div class="command-item">
-                                <code>git add &lt;file&gt;</code>
-                                <span>Stage a file</span>
-                                <button class="info-btn-small" data-command="git add">ⓘ</button>
-                            </div>
-                            <div class="command-item">
-                                <code>git commit -m "message"</code>
-                                <span>Commit with message</span>
-                                <button class="info-btn-small" data-command="git commit">ⓘ</button>
-                            </div>
-                            <div class="command-item">
-                                <code>git push</code>
-                                <span>Push to remote</span>
-                                <button class="info-btn-small" data-command="git push">ⓘ</button>
-                            </div>
-                            <div class="command-item">
-                                <code>git pull</code>
-                                <span>Pull from remote</span>
-                                <button class="info-btn-small" data-command="git pull">ⓘ</button>
-                            </div>
-                            <div class="command-item">
-                                <code>git diff</code>
-                                <span>See changes</span>
-                                <button class="info-btn-small" data-command="git diff">ⓘ</button>
-                            </div>
-                            <div class="command-item">
-                                <code>git log --oneline</code>
-                                <span>View commit history</span>
-                                <button class="info-btn-small" data-command="git log">ⓘ</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="command-category">
-                        <h3>🌿 Branching</h3>
-                        <div class="command-list">
-                            <div class="command-item">
-                                <code>git branch</code>
-                                <span>List branches</span>
-                                <button class="info-btn-small" data-command="git branch">ⓘ</button>
-                            </div>
-                            <div class="command-item">
-                                <code>git checkout -b &lt;name&gt;</code>
-                                <span>Create & switch</span>
-                                <button class="info-btn-small" data-command="git checkout">ⓘ</button>
-                            </div>
-                            <div class="command-item">
-                                <code>git merge &lt;branch&gt;</code>
-                                <span>Merge branch</span>
-                                <button class="info-btn-small" data-command="git merge">ⓘ</button>
-                            </div>
-                            <div class="command-item">
-                                <code>git branch -d &lt;name&gt;</code>
-                                <span>Delete branch</span>
-                                <button class="info-btn-small" data-command="git branch">ⓘ</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="command-category">
-                        <h3>⏪ Undo & Fix</h3>
-                        <div class="command-list">
-                            <div class="command-item">
-                                <code>git stash</code>
-                                <span>Stash changes</span>
-                                <button class="info-btn-small" data-command="git stash">ⓘ</button>
-                            </div>
-                            <div class="command-item">
-                                <code>git commit --amend</code>
-                                <span>Fix last commit</span>
-                                <button class="info-btn-small" data-command="git commit">ⓘ</button>
-                            </div>
-                            <div class="command-item">
-                                <code>git reset --soft HEAD~1</code>
-                                <span>Undo commit (keep changes)</span>
-                                <button class="info-btn-small" data-command="git reset">ⓘ</button>
-                            </div>
-                            <div class="command-item">
-                                <code>git revert &lt;commit&gt;</code>
-                                <span>Undo pushed commit</span>
-                                <button class="info-btn-small" data-command="git revert">ⓘ</button>
+                        <div class="warning-box">
+                            <span class="warning-icon">⚠️</span>
+                            <div class="warning-content">
+                                <strong>Never rebase commits that have been pushed to a shared branch!</strong> This rewrites history and causes problems for teammates.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- QUIZ: Commands -->
-                <div class="quiz-section" data-quiz-id="commands">
+                <!-- Scenario 8.2: Cherry Pick -->
+                <div class="scenario-card" data-scenario="8.2">
+                    <div class="card-header">
+                        <div class="card-icon">🍒</div>
+                        <div class="card-title-section">
+                            <h3>8.2 Cherry-Pick Specific Commits</h3>
+                            <span class="difficulty advanced">Advanced</span>
+                        </div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="card-preview">
+                        <p>Copy a specific commit from one branch to another</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="scenario-context">
+                            <h4>🎬 The Situation</h4>
+                            <p>There's a bug fix on the <code>develop</code> branch that you need on <code>main</code> right now, but you don't want to merge the entire branch.</p>
+                        </div>
+
+                        <div class="steps-container">
+                            <div class="terminal">
+                                <div class="terminal-header">
+                                    <span class="terminal-title">Terminal</span>
+                                    <button class="copy-btn">Copy</button>
+                                </div>
+                                <pre><code># Find the commit hash you need
+git log develop --oneline
+
+# Switch to target branch
+git checkout main
+
+# Cherry-pick the specific commit
+git cherry-pick abc1234</code></pre>
+                            </div>
+                            <p>The commit is now on your current branch!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scenario 8.3: Tags -->
+                <div class="scenario-card" data-scenario="8.3">
+                    <div class="card-header">
+                        <div class="card-icon">🏷️</div>
+                        <div class="card-title-section">
+                            <h3>8.3 Versioning with Tags</h3>
+                            <span class="difficulty advanced">Advanced</span>
+                        </div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="card-preview">
+                        <p>Mark releases with version tags</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="steps-container">
+                            <h4>📝 Creating Release Tags</h4>
+                            
+                            <div class="terminal">
+                                <div class="terminal-header">
+                                    <span class="terminal-title">Terminal</span>
+                                    <button class="copy-btn">Copy</button>
+                                </div>
+                                <pre><code># Create annotated tag (recommended)
+git tag -a v1.0.0 -m "Release version 1.0.0"
+
+# List all tags
+git tag
+
+# Push tags to remote
+git push --tags
+
+# Checkout a specific tag
+git checkout v1.0.0</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 8 Quiz -->
+                <div class="quiz-section" data-quiz="module-8">
                     <div class="quiz-header">
-                        <h3>🧠 Final Challenge: Command Mastery</h3>
-                        <p>Test your overall Git knowledge with these 10 tricky questions!</p>
+                        <h4>📝 Module 8 Quiz: Pro Techniques</h4>
+                        <p>Test your knowledge of advanced Git operations</p>
                     </div>
-                    <div class="quiz-container">
+                    <div class="quiz-container" id="quiz-module-8">
                         <div class="quiz-progress">
-                            <span class="quiz-progress-text">Question <span class="current-q">1</span> of 10</span>
-                            <div class="quiz-progress-bar">
-                                <div class="quiz-progress-fill"></div>
-                            </div>
+                            <div class="quiz-progress-bar"><div class="quiz-progress-fill"></div></div>
+                            <span class="quiz-progress-text">Question 1 of 10</span>
                         </div>
-                        <div class="quiz-questions"></div>
+                        <div class="quiz-question-container"></div>
                         <div class="quiz-navigation">
-                            <button class="btn-secondary quiz-prev" disabled>Previous</button>
-                            <button class="btn-primary quiz-next">Next</button>
-                            <button class="btn-success quiz-submit" style="display:none;">Submit Quiz</button>
+                            <button class="quiz-btn quiz-prev" disabled>Previous</button>
+                            <button class="quiz-btn quiz-next">Next</button>
+                            <button class="quiz-btn quiz-submit" style="display:none;">Submit Quiz</button>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Footer -->
-            <footer class="main-footer">
-                <div class="footer-content">
-                    <p>🎓 Git Training for Infosys Freshers | 2026</p>
-                    <p>Remember: Everyone makes mistakes with Git. The key is knowing how to fix them!</p>
+            <!-- ==================== COMMAND REFERENCE ==================== -->
+            <section id="command-reference" class="section">
+                <div class="section-header">
+                    <h2>📋 Command Quick Reference</h2>
+                    <p>All essential Git commands organized by workflow</p>
                 </div>
-            </footer>
+
+                <div class="reference-grid">
+                    <div class="reference-category">
+                        <h4>⚙️ Setup & Config</h4>
+                        <div class="reference-commands">
+                            <div class="ref-cmd"><code>git config --global user.name "Name"</code><span>Set your name</span></div>
+                            <div class="ref-cmd"><code>git config --global user.email "email"</code><span>Set your email</span></div>
+                            <div class="ref-cmd"><code>git init</code><span>Initialize new repo</span></div>
+                            <div class="ref-cmd"><code>git clone &lt;url&gt;</code><span>Clone repository</span></div>
+                        </div>
+                    </div>
+
+                    <div class="reference-category">
+                        <h4>📅 Daily Workflow</h4>
+                        <div class="reference-commands">
+                            <div class="ref-cmd"><code>git status</code><span>Check status</span></div>
+                            <div class="ref-cmd"><code>git add &lt;file&gt;</code><span>Stage changes</span></div>
+                            <div class="ref-cmd"><code>git add .</code><span>Stage all</span></div>
+                            <div class="ref-cmd"><code>git commit -m "msg"</code><span>Commit changes</span></div>
+                            <div class="ref-cmd"><code>git push</code><span>Push to remote</span></div>
+                            <div class="ref-cmd"><code>git pull</code><span>Pull from remote</span></div>
+                        </div>
+                    </div>
+
+                    <div class="reference-category">
+                        <h4>📜 History</h4>
+                        <div class="reference-commands">
+                            <div class="ref-cmd"><code>git log --oneline</code><span>Compact history</span></div>
+                            <div class="ref-cmd"><code>git log --graph --all</code><span>Visual graph</span></div>
+                            <div class="ref-cmd"><code>git diff</code><span>See changes</span></div>
+                            <div class="ref-cmd"><code>git diff --staged</code><span>See staged changes</span></div>
+                            <div class="ref-cmd"><code>git show &lt;commit&gt;</code><span>Show commit details</span></div>
+                            <div class="ref-cmd"><code>git blame &lt;file&gt;</code><span>Who changed what</span></div>
+                        </div>
+                    </div>
+
+                    <div class="reference-category">
+                        <h4>🌿 Branching</h4>
+                        <div class="reference-commands">
+                            <div class="ref-cmd"><code>git branch</code><span>List branches</span></div>
+                            <div class="ref-cmd"><code>git branch &lt;name&gt;</code><span>Create branch</span></div>
+                            <div class="ref-cmd"><code>git checkout &lt;branch&gt;</code><span>Switch branch</span></div>
+                            <div class="ref-cmd"><code>git checkout -b &lt;name&gt;</code><span>Create & switch</span></div>
+                            <div class="ref-cmd"><code>git merge &lt;branch&gt;</code><span>Merge branch</span></div>
+                            <div class="ref-cmd"><code>git branch -d &lt;name&gt;</code><span>Delete branch</span></div>
+                        </div>
+                    </div>
+
+                    <div class="reference-category">
+                        <h4>📦 Stash</h4>
+                        <div class="reference-commands">
+                            <div class="ref-cmd"><code>git stash</code><span>Save changes</span></div>
+                            <div class="ref-cmd"><code>git stash list</code><span>List stashes</span></div>
+                            <div class="ref-cmd"><code>git stash pop</code><span>Apply & remove</span></div>
+                            <div class="ref-cmd"><code>git stash apply</code><span>Apply & keep</span></div>
+                        </div>
+                    </div>
+
+                    <div class="reference-category">
+                        <h4>⏪ Undo</h4>
+                        <div class="reference-commands">
+                            <div class="ref-cmd"><code>git restore &lt;file&gt;</code><span>Discard changes</span></div>
+                            <div class="ref-cmd"><code>git restore --staged &lt;file&gt;</code><span>Unstage file</span></div>
+                            <div class="ref-cmd"><code>git reset --soft HEAD~1</code><span>Undo commit (keep staged)</span></div>
+                            <div class="ref-cmd"><code>git reset HEAD~1</code><span>Undo commit (keep changes)</span></div>
+                            <div class="ref-cmd"><code>git revert &lt;commit&gt;</code><span>Undo published commit</span></div>
+                            <div class="ref-cmd"><code>git reflog</code><span>View history of HEAD</span></div>
+                        </div>
+                    </div>
+
+                    <div class="reference-category">
+                        <h4>🌐 Remote</h4>
+                        <div class="reference-commands">
+                            <div class="ref-cmd"><code>git remote -v</code><span>List remotes</span></div>
+                            <div class="ref-cmd"><code>git remote add origin &lt;url&gt;</code><span>Add remote</span></div>
+                            <div class="ref-cmd"><code>git fetch</code><span>Download (no merge)</span></div>
+                            <div class="ref-cmd"><code>git push -u origin &lt;branch&gt;</code><span>Push new branch</span></div>
+                        </div>
+                    </div>
+
+                    <div class="reference-category">
+                        <h4>🔧 Advanced</h4>
+                        <div class="reference-commands">
+                            <div class="ref-cmd"><code>git rebase -i HEAD~n</code><span>Interactive rebase</span></div>
+                            <div class="ref-cmd"><code>git cherry-pick &lt;commit&gt;</code><span>Copy commit</span></div>
+                            <div class="ref-cmd"><code>git tag -a v1.0.0 -m "msg"</code><span>Create tag</span></div>
+                            <div class="ref-cmd"><code>git push --tags</code><span>Push tags</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
     </div>
 
