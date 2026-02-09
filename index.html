@@ -2193,92 +2193,258 @@ git checkout v1.0.0</code></pre>
                     <p>All essential Git commands organized by workflow</p>
                 </div>
 
-                <div class="reference-grid">
-                    <div class="reference-category">
-                        <h4>⚙️ Setup & Config</h4>
-                        <div class="reference-commands">
-                            <div class="ref-cmd"><code>git config --global user.name "Name"</code><span>Set your name</span></div>
-                            <div class="ref-cmd"><code>git config --global user.email "email"</code><span>Set your email</span></div>
-                            <div class="ref-cmd"><code>git init</code><span>Initialize new repo</span></div>
-                            <div class="ref-cmd"><code>git clone &lt;url&gt;</code><span>Clone repository</span></div>
+                <div class="cmd-ref-container">
+                    <!-- Setup & Config -->
+                    <div class="cmd-category">
+                        <div class="cmd-category-header">
+                            <h3>⚙️ Setup & Config</h3>
+                        </div>
+                        <div class="cmd-list">
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git config</code>
+                                    <span class="cmd-desc">Configure Git settings</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git config">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git init</code>
+                                    <span class="cmd-desc">Initialize new repository</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git init">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git clone</code>
+                                    <span class="cmd-desc">Clone repository</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git clone">Know More</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="reference-category">
-                        <h4>📅 Daily Workflow</h4>
-                        <div class="reference-commands">
-                            <div class="ref-cmd"><code>git status</code><span>Check status</span></div>
-                            <div class="ref-cmd"><code>git add &lt;file&gt;</code><span>Stage changes</span></div>
-                            <div class="ref-cmd"><code>git add .</code><span>Stage all</span></div>
-                            <div class="ref-cmd"><code>git commit -m "msg"</code><span>Commit changes</span></div>
-                            <div class="ref-cmd"><code>git push</code><span>Push to remote</span></div>
-                            <div class="ref-cmd"><code>git pull</code><span>Pull from remote</span></div>
+                    <!-- Daily Workflow -->
+                    <div class="cmd-category">
+                        <div class="cmd-category-header">
+                            <h3>📅 Daily Workflow</h3>
+                        </div>
+                        <div class="cmd-list">
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git status</code>
+                                    <span class="cmd-desc">Check repository status</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git status">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git add</code>
+                                    <span class="cmd-desc">Stage changes</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git add">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git commit</code>
+                                    <span class="cmd-desc">Commit changes to repository</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git commit">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git push</code>
+                                    <span class="cmd-desc">Push to remote repository</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git push">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git pull</code>
+                                    <span class="cmd-desc">Pull from remote repository</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git pull">Know More</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="reference-category">
-                        <h4>📜 History</h4>
-                        <div class="reference-commands">
-                            <div class="ref-cmd"><code>git log --oneline</code><span>Compact history</span></div>
-                            <div class="ref-cmd"><code>git log --graph --all</code><span>Visual graph</span></div>
-                            <div class="ref-cmd"><code>git diff</code><span>See changes</span></div>
-                            <div class="ref-cmd"><code>git diff --staged</code><span>See staged changes</span></div>
-                            <div class="ref-cmd"><code>git show &lt;commit&gt;</code><span>Show commit details</span></div>
-                            <div class="ref-cmd"><code>git blame &lt;file&gt;</code><span>Who changed what</span></div>
+                    <!-- History & Inspection -->
+                    <div class="cmd-category">
+                        <div class="cmd-category-header">
+                            <h3>📜 History & Inspection</h3>
+                        </div>
+                        <div class="cmd-list">
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git log</code>
+                                    <span class="cmd-desc">View commit history</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git log">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git diff</code>
+                                    <span class="cmd-desc">Show differences between commits</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git diff">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git show</code>
+                                    <span class="cmd-desc">Show specific commit details</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git show">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git blame</code>
+                                    <span class="cmd-desc">Show who changed each line</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git blame">Know More</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="reference-category">
-                        <h4>🌿 Branching</h4>
-                        <div class="reference-commands">
-                            <div class="ref-cmd"><code>git branch</code><span>List branches</span></div>
-                            <div class="ref-cmd"><code>git branch &lt;name&gt;</code><span>Create branch</span></div>
-                            <div class="ref-cmd"><code>git checkout &lt;branch&gt;</code><span>Switch branch</span></div>
-                            <div class="ref-cmd"><code>git checkout -b &lt;name&gt;</code><span>Create & switch</span></div>
-                            <div class="ref-cmd"><code>git merge &lt;branch&gt;</code><span>Merge branch</span></div>
-                            <div class="ref-cmd"><code>git branch -d &lt;name&gt;</code><span>Delete branch</span></div>
+                    <!-- Branching -->
+                    <div class="cmd-category">
+                        <div class="cmd-category-header">
+                            <h3>🌿 Branching</h3>
+                        </div>
+                        <div class="cmd-list">
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git branch</code>
+                                    <span class="cmd-desc">Manage branches</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git branch">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git checkout</code>
+                                    <span class="cmd-desc">Switch branches or restore files</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git checkout">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git merge</code>
+                                    <span class="cmd-desc">Merge branches</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git merge">Know More</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="reference-category">
-                        <h4>📦 Stash</h4>
-                        <div class="reference-commands">
-                            <div class="ref-cmd"><code>git stash</code><span>Save changes</span></div>
-                            <div class="ref-cmd"><code>git stash list</code><span>List stashes</span></div>
-                            <div class="ref-cmd"><code>git stash pop</code><span>Apply & remove</span></div>
-                            <div class="ref-cmd"><code>git stash apply</code><span>Apply & keep</span></div>
+                    <!-- Stash & Cleanup -->
+                    <div class="cmd-category">
+                        <div class="cmd-category-header">
+                            <h3>📦 Stash & Cleanup</h3>
+                        </div>
+                        <div class="cmd-list">
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git stash</code>
+                                    <span class="cmd-desc">Save changes temporarily</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git stash">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git clean</code>
+                                    <span class="cmd-desc">Remove untracked files</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git clean">Know More</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="reference-category">
-                        <h4>⏪ Undo</h4>
-                        <div class="reference-commands">
-                            <div class="ref-cmd"><code>git restore &lt;file&gt;</code><span>Discard changes</span></div>
-                            <div class="ref-cmd"><code>git restore --staged &lt;file&gt;</code><span>Unstage file</span></div>
-                            <div class="ref-cmd"><code>git reset --soft HEAD~1</code><span>Undo commit (keep staged)</span></div>
-                            <div class="ref-cmd"><code>git reset HEAD~1</code><span>Undo commit (keep changes)</span></div>
-                            <div class="ref-cmd"><code>git revert &lt;commit&gt;</code><span>Undo published commit</span></div>
-                            <div class="ref-cmd"><code>git reflog</code><span>View history of HEAD</span></div>
+                    <!-- Undo & Recovery -->
+                    <div class="cmd-category">
+                        <div class="cmd-category-header">
+                            <h3>⏪ Undo & Recovery</h3>
+                        </div>
+                        <div class="cmd-list">
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git restore</code>
+                                    <span class="cmd-desc">Restore files to previous state</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git restore">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git reset</code>
+                                    <span class="cmd-desc">Reset commits or staging area</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git reset">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git revert</code>
+                                    <span class="cmd-desc">Undo published commits</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git revert">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git reflog</code>
+                                    <span class="cmd-desc">View history of HEAD changes</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git reflog">Know More</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="reference-category">
-                        <h4>🌐 Remote</h4>
-                        <div class="reference-commands">
-                            <div class="ref-cmd"><code>git remote -v</code><span>List remotes</span></div>
-                            <div class="ref-cmd"><code>git remote add origin &lt;url&gt;</code><span>Add remote</span></div>
-                            <div class="ref-cmd"><code>git fetch</code><span>Download (no merge)</span></div>
-                            <div class="ref-cmd"><code>git push -u origin &lt;branch&gt;</code><span>Push new branch</span></div>
+                    <!-- Remote Management -->
+                    <div class="cmd-category">
+                        <div class="cmd-category-header">
+                            <h3>🌐 Remote Management</h3>
+                        </div>
+                        <div class="cmd-list">
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git remote</code>
+                                    <span class="cmd-desc">Manage remote repositories</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git remote">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git fetch</code>
+                                    <span class="cmd-desc">Download updates from remote</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git fetch">Know More</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="reference-category">
-                        <h4>🔧 Advanced</h4>
-                        <div class="reference-commands">
-                            <div class="ref-cmd"><code>git rebase -i HEAD~n</code><span>Interactive rebase</span></div>
-                            <div class="ref-cmd"><code>git cherry-pick &lt;commit&gt;</code><span>Copy commit</span></div>
-                            <div class="ref-cmd"><code>git tag -a v1.0.0 -m "msg"</code><span>Create tag</span></div>
-                            <div class="ref-cmd"><code>git push --tags</code><span>Push tags</span></div>
+                    <!-- Advanced -->
+                    <div class="cmd-category">
+                        <div class="cmd-category-header">
+                            <h3>🔧 Advanced</h3>
+                        </div>
+                        <div class="cmd-list">
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git rebase</code>
+                                    <span class="cmd-desc">Reapply commits on top of another branch</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git rebase">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git cherry-pick</code>
+                                    <span class="cmd-desc">Apply specific commits to a branch</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git cherry-pick">Know More</button>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-content">
+                                    <code class="cmd-code">git tag</code>
+                                    <span class="cmd-desc">Create version tags</span>
+                                </div>
+                                <button class="btn-know-more" data-cmd="git tag">Know More</button>
+                            </div>
                         </div>
                     </div>
                 </div>
