@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSidebarNavigation();
     initQuizzes();
     initModals();
+    initCommandReference();
     updateProgress();
 });
 
@@ -1335,3 +1336,681 @@ function retryQuiz(quizId) {
 
 // Make retryQuiz available globally
 window.retryQuiz = retryQuiz;
+
+// ================================
+// COMMAND REFERENCE DATA
+// ================================
+const commandData = {
+    'git config': {
+        description: 'Configure Git settings like user name, email, and preferences',
+        options: [
+            {
+                flag: '--global',
+                description: 'Apply configuration to all repositories for this user'
+            },
+            {
+                flag: '--local',
+                description: 'Apply configuration to only this repository'
+            },
+            {
+                flag: 'user.name',
+                description: 'Set the author name for commits'
+            },
+            {
+                flag: 'user.email',
+                description: 'Set the author email for commits'
+            },
+            {
+                flag: 'core.editor',
+                description: 'Set the default text editor for Git'
+            }
+        ],
+        example: 'git config --global user.name "Your Name"\ngit config --global user.email "your@email.com"'
+    },
+    'git init': {
+        description: 'Initialize a new Git repository in the current directory',
+        options: [
+            {
+                flag: '--initial-branch=<name>',
+                description: 'Specify the name of the initial branch (default: master)'
+            },
+            {
+                flag: '--bare',
+                description: 'Create a bare repository (no working directory)'
+            },
+            {
+                flag: '-q, --quiet',
+                description: 'Run quietly'
+            }
+        ],
+        example: 'git init\ngit init my-project\ngit init --initial-branch=main'
+    },
+    'git clone': {
+        description: 'Clone a repository to create a local copy',
+        options: [
+            {
+                flag: '<repository>',
+                description: 'The URL or path of the repository to clone'
+            },
+            {
+                flag: '<directory>',
+                description: 'Directory name for the cloned repository'
+            },
+            {
+                flag: '--depth <depth>',
+                description: 'Create a shallow clone with limited history'
+            },
+            {
+                flag: '--branch <branch>',
+                description: 'Clone a specific branch'
+            },
+            {
+                flag: '--single-branch',
+                description: 'Clone only a single branch'
+            }
+        ],
+        example: 'git clone https://github.com/user/repo.git\ngit clone https://github.com/user/repo.git my-folder\ngit clone --depth 1 <repository>'
+    },
+    'git status': {
+        description: 'Show the working tree status and staging area',
+        options: [
+            {
+                flag: '-s, --short',
+                description: 'Show output in short format'
+            },
+            {
+                flag: '-b, --branch',
+                description: 'Show branch information'
+            },
+            {
+                flag: '--porcelain',
+                description: 'Show machine-readable format'
+            },
+            {
+                flag: '-u[<mode>], --untracked-files[=<mode>]',
+                description: 'Show untracked files'
+            }
+        ],
+        example: 'git status\ngit status -s\ngit status --branch'
+    },
+    'git add': {
+        description: 'Stage changes to the index for the next commit',
+        options: [
+            {
+                flag: '<pathspec>',
+                description: 'Path(s) to the files to stage'
+            },
+            {
+                flag: '.',
+                description: 'Stage all changes in the current directory'
+            },
+            {
+                flag: '-A, --all',
+                description: 'Stage all changes in the entire repository'
+            },
+            {
+                flag: '-u, --update',
+                description: 'Update only tracked files'
+            },
+            {
+                flag: '-p, --patch',
+                description: 'Interactively choose hunks to stage'
+            }
+        ],
+        example: 'git add file.txt\ngit add .\ngit add -A\ngit add -p'
+    },
+    'git commit': {
+        description: 'Create a new commit with the staged changes',
+        options: [
+            {
+                flag: '-m <message>',
+                description: 'Commit message (required)'
+            },
+            {
+                flag: '-a, --all',
+                description: 'Stage and commit all tracked file changes'
+            },
+            {
+                flag: '--amend',
+                description: 'Modify the previous commit'
+            },
+            {
+                flag: '--no-verify',
+                description: 'Skip pre-commit hooks'
+            },
+            {
+                flag: '--allow-empty',
+                description: 'Allow creating a commit with no changes'
+            }
+        ],
+        example: 'git commit -m "Add new feature"\ngit commit -am "Update files"\ngit commit --amend'
+    },
+    'git push': {
+        description: 'Update remote repository with local commits',
+        options: [
+            {
+                flag: '<remote>',
+                description: 'Remote name (usually "origin")'
+            },
+            {
+                flag: '<branch>',
+                description: 'Branch name to push'
+            },
+            {
+                flag: '-u, --set-upstream',
+                description: 'Set the upstream branch for tracking'
+            },
+            {
+                flag: '--all',
+                description: 'Push all branches'
+            },
+            {
+                flag: '--force',
+                description: 'Force push (use with caution!)'
+            },
+            {
+                flag: '--tags',
+                description: 'Push all tags'
+            }
+        ],
+        example: 'git push\ngit push origin main\ngit push -u origin feature-branch'
+    },
+    'git pull': {
+        description: 'Fetch from and integrate with remote repository',
+        options: [
+            {
+                flag: '<remote>',
+                description: 'Remote name (usually "origin")'
+            },
+            {
+                flag: '<branch>',
+                description: 'Branch name to pull'
+            },
+            {
+                flag: '--rebase',
+                description: 'Rebase instead of merge'
+            },
+            {
+                flag: '--no-rebase',
+                description: 'Create a merge commit'
+            }
+        ],
+        example: 'git pull\ngit pull origin main\ngit pull --rebase'
+    },
+    'git log': {
+        description: 'Show commit history',
+        options: [
+            {
+                flag: '--oneline',
+                description: 'Show commits in one-line format'
+            },
+            {
+                flag: '--graph',
+                description: 'Show branch structure as ASCII graph'
+            },
+            {
+                flag: '--all',
+                description: 'Show all branches'
+            },
+            {
+                flag: '-n <number>',
+                description: 'Limit output to recent commits'
+            },
+            {
+                flag: '--author=<pattern>',
+                description: 'Filter by author'
+            },
+            {
+                flag: '--since=<date>',
+                description: 'Filter commits since date'
+            }
+        ],
+        example: 'git log\ngit log --oneline\ngit log --graph --all\ngit log -10'
+    },
+    'git diff': {
+        description: 'Show differences between commits, branches, or working tree',
+        options: [
+            {
+                flag: '<commit1> <commit2>',
+                description: 'Show diff between two commits'
+            },
+            {
+                flag: '--staged',
+                description: 'Show diff of staged changes'
+            },
+            {
+                flag: '--word-diff',
+                description: 'Show word-level diff'
+            },
+            {
+                flag: '--stat',
+                description: 'Show statistics only'
+            },
+            {
+                flag: '<file>',
+                description: 'Show diff for specific file'
+            }
+        ],
+        example: 'git diff\ngit diff --staged\ngit diff HEAD~1\ngit diff main develop'
+    },
+    'git show': {
+        description: 'Show specific commit or object details',
+        options: [
+            {
+                flag: '<commit>',
+                description: 'Commit hash or ref to show'
+            },
+            {
+                flag: '--stat',
+                description: 'Show statistics only'
+            },
+            {
+                flag: '--name-only',
+                description: 'Show only changed files'
+            }
+        ],
+        example: 'git show HEAD\ngit show abc123\ngit show HEAD~2'
+    },
+    'git blame': {
+        description: 'Show who changed each line in a file',
+        options: [
+            {
+                flag: '<file>',
+                description: 'File to analyze'
+            },
+            {
+                flag: '-L <start>,<end>',
+                description: 'Show specific line range'
+            },
+            {
+                flag: '--date=<format>',
+                description: 'Show dates in specific format'
+            }
+        ],
+        example: 'git blame filename.txt\ngit blame -L 10,20 filename.txt'
+    },
+    'git branch': {
+        description: 'List, create, or delete branches',
+        options: [
+            {
+                flag: '(no arguments)',
+                description: 'List local branches'
+            },
+            {
+                flag: '-a, --all',
+                description: 'List all branches (local and remote)'
+            },
+            {
+                flag: '<branch>',
+                description: 'Create new branch'
+            },
+            {
+                flag: '-d <branch>',
+                description: 'Delete branch (safe)'
+            },
+            {
+                flag: '-D <branch>',
+                description: 'Force delete branch'
+            },
+            {
+                flag: '-m <old> <new>',
+                description: 'Rename branch'
+            }
+        ],
+        example: 'git branch\ngit branch feature\ngit branch -a\ngit branch -d feature'
+    },
+    'git checkout': {
+        description: 'Switch branches, restore files, or create new branches',
+        options: [
+            {
+                flag: '<branch>',
+                description: 'Switch to branch'
+            },
+            {
+                flag: '-b <branch>',
+                description: 'Create and switch to new branch'
+            },
+            {
+                flag: '<file>',
+                description: 'Restore file to HEAD state'
+            },
+            {
+                flag: '<commit> -- <file>',
+                description: 'Restore file to specific commit'
+            }
+        ],
+        example: 'git checkout main\ngit checkout -b feature-branch\ngit checkout filename.txt'
+    },
+    'git merge': {
+        description: 'Merge branches into current branch',
+        options: [
+            {
+                flag: '<branch>',
+                description: 'Branch to merge'
+            },
+            {
+                flag: '--no-ff',
+                description: 'Create merge commit even for fast-forward'
+            },
+            {
+                flag: '--squash',
+                description: 'Squash commits before merging'
+            },
+            {
+                flag: '--abort',
+                description: 'Abort the merge process'
+            }
+        ],
+        example: 'git merge develop\ngit merge --no-ff feature-branch\ngit merge --abort'
+    },
+    'git stash': {
+        description: 'Save and restore incomplete changes',
+        options: [
+            {
+                flag: '(no arguments)',
+                description: 'Stash current changes'
+            },
+            {
+                flag: 'save <message>',
+                description: 'Stash with descriptive message'
+            },
+            {
+                flag: 'list',
+                description: 'List all stashes'
+            },
+            {
+                flag: 'pop [<stash>]',
+                description: 'Apply and remove stash'
+            },
+            {
+                flag: 'apply [<stash>]',
+                description: 'Apply stash without removing'
+            },
+            {
+                flag: 'drop [<stash>]',
+                description: 'Delete stash'
+            }
+        ],
+        example: 'git stash\ngit stash save "WIP: feature"\ngit stash list\ngit stash pop'
+    },
+    'git clean': {
+        description: 'Remove untracked files from working directory',
+        options: [
+            {
+                flag: '-n, --dry-run',
+                description: 'Preview what would be deleted'
+            },
+            {
+                flag: '-f, --force',
+                description: 'Force deletion'
+            },
+            {
+                flag: '-d',
+                description: 'Also remove untracked directories'
+            },
+            {
+                flag: '-x',
+                description: 'Also remove ignored files'
+            }
+        ],
+        example: 'git clean -n\ngit clean -fd\ngit clean -fdx'
+    },
+    'git restore': {
+        description: 'Restore working tree files or staging area',
+        options: [
+            {
+                flag: '<file>',
+                description: 'File to restore (from HEAD)'
+            },
+            {
+                flag: '--staged <file>',
+                description: 'Unstage file from index'
+            },
+            {
+                flag: '--source=<commit>',
+                description: 'Restore from specific commit'
+            },
+            {
+                flag: '--worktree',
+                description: 'Restore in working directory'
+            }
+        ],
+        example: 'git restore file.txt\ngit restore --staged file.txt\ngit restore --source=HEAD~1 file.txt'
+    },
+    'git reset': {
+        description: 'Reset current HEAD to specified state',
+        options: [
+            {
+                flag: '--soft HEAD~n',
+                description: 'Undo commits, keep staged changes'
+            },
+            {
+                flag: '--mixed HEAD~n',
+                description: 'Undo commits, keep changes unstaged (default)'
+            },
+            {
+                flag: '--hard HEAD~n',
+                description: 'Undo commits and discard changes'
+            },
+            {
+                flag: '<file>',
+                description: 'Unstage file'
+            }
+        ],
+        example: 'git reset --soft HEAD~1\ngit reset --hard HEAD~1\ngit reset file.txt'
+    },
+    'git revert': {
+        description: 'Create new commits that undo specified commits',
+        options: [
+            {
+                flag: '<commit>',
+                description: 'Commit to revert'
+            },
+            {
+                flag: '--no-edit',
+                description: 'Use default commit message'
+            },
+            {
+                flag: '--no-commit',
+                description: 'Create revert but don\'t commit'
+            }
+        ],
+        example: 'git revert abc123\ngit revert HEAD\ngit revert --no-edit abc123'
+    },
+    'git reflog': {
+        description: 'Show history of HEAD and other reference changes',
+        options: [
+            {
+                flag: '(no arguments)',
+                description: 'Show reflog for HEAD'
+            },
+            {
+                flag: '<ref>',
+                description: 'Show reflog for specific reference'
+            },
+            {
+                flag: 'expire --expire=now --all',
+                description: 'Clear all reflog entries'
+            }
+        ],
+        example: 'git reflog\ngit reflog show\ngit reflog expire --expire=now --all'
+    },
+    'git remote': {
+        description: 'Manage remote repository connections',
+        options: [
+            {
+                flag: '(no arguments)',
+                description: 'List remotes'
+            },
+            {
+                flag: '-v, --verbose',
+                description: 'Show URLs for remotes'
+            },
+            {
+                flag: 'add <name> <url>',
+                description: 'Add new remote'
+            },
+            {
+                flag: 'remove <name>',
+                description: 'Remove remote'
+            },
+            {
+                flag: 'rename <old> <new>',
+                description: 'Rename remote'
+            },
+            {
+                flag: 'set-url <name> <new-url>',
+                description: 'Change remote URL'
+            }
+        ],
+        example: 'git remote\ngit remote -v\ngit remote add origin https://github.com/user/repo.git'
+    },
+    'git fetch': {
+        description: 'Download objects and references from remote repository',
+        options: [
+            {
+                flag: '<remote>',
+                description: 'Remote name (usually "origin")'
+            },
+            {
+                flag: '--all',
+                description: 'Fetch from all remotes'
+            },
+            {
+                flag: '--prune',
+                description: 'Remove remote-tracking branches no longer on remote'
+            },
+            {
+                flag: '--depth <depth>',
+                description: 'Fetch limited history'
+            }
+        ],
+        example: 'git fetch\ngit fetch origin\ngit fetch --all\ngit fetch --prune'
+    },
+    'git rebase': {
+        description: 'Reapply commits on top of another branch',
+        options: [
+            {
+                flag: '<branch>',
+                description: 'Branch to rebase onto'
+            },
+            {
+                flag: '-i, --interactive',
+                description: 'Interactive rebase for editing commits'
+            },
+            {
+                flag: '--continue',
+                description: 'Continue after resolving conflicts'
+            },
+            {
+                flag: '--abort',
+                description: 'Cancel the rebase process'
+            }
+        ],
+        example: 'git rebase main\ngit rebase -i HEAD~3\ngit rebase --continue'
+    },
+    'git cherry-pick': {
+        description: 'Apply specific commits to current branch',
+        options: [
+            {
+                flag: '<commit>',
+                description: 'Commit(s) to apply'
+            },
+            {
+                flag: '--continue',
+                description: 'Continue after resolving conflicts'
+            },
+            {
+                flag: '--abort',
+                description: 'Cancel the cherry-pick process'
+            },
+            {
+                flag: '-n, --no-commit',
+                description: 'Stage changes without committing'
+            }
+        ],
+        example: 'git cherry-pick abc123\ngit cherry-pick abc123..def456\ngit cherry-pick --continue'
+    },
+    'git tag': {
+        description: 'Create, list, and delete tags',
+        options: [
+            {
+                flag: '(no arguments)',
+                description: 'List tags'
+            },
+            {
+                flag: '<tagname>',
+                description: 'Create lightweight tag'
+            },
+            {
+                flag: '-a <tagname>',
+                description: 'Create annotated tag'
+            },
+            {
+                flag: '-m <message>',
+                description: 'Tag message (with -a)'
+            },
+            {
+                flag: '-d <tagname>',
+                description: 'Delete tag'
+            }
+        ],
+        example: 'git tag\ngit tag v1.0.0\ngit tag -a v1.0.0 -m "Release version 1.0.0"'
+    }
+};
+
+// ================================
+// COMMAND REFERENCE MODAL
+// ================================
+function initCommandReference() {
+    document.querySelectorAll('.btn-know-more').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const command = btn.dataset.cmd;
+            showCommandDetails(command);
+        });
+    });
+}
+
+function showCommandDetails(command) {
+    const data = commandData[command];
+    if (!data) return;
+    
+    const modal = document.getElementById('commandModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    
+    modalTitle.textContent = command;
+    
+    let html = `<p class="cmd-description">${data.description}</p>`;
+    
+    if (data.options && data.options.length > 0) {
+        html += '<h4 style="margin-top: 1.5rem; color: var(--primary-dark);">Options & Flags</h4>';
+        html += '<div style="margin-top: 1rem;">';
+        
+        data.options.forEach(opt => {
+            html += `
+                <div class="cmd-option">
+                    <div class="option-flag">
+                        <code>${opt.flag}</code>
+                    </div>
+                    <div class="option-description">${opt.description}</div>
+                </div>
+            `;
+        });
+        
+        html += '</div>';
+    }
+    
+    if (data.example) {
+        html += `
+            <div class="cmd-example">
+                <div class="cmd-example-title">📝 Example Usage:</div>
+                <code>${data.example.replace(/\n/g, '<br>')}</code>
+            </div>
+        `;
+    }
+    
+    modalBody.innerHTML = html;
+    modal.classList.add('active');
+}
+
